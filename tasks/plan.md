@@ -69,10 +69,10 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 
 ### Phase 3: RAG
 - [x] T6: Ingestão e índice FAISS
-- [ ] T7: Tool de busca semântica
+- [x] T7: Tool de busca semântica
 
 ### Checkpoint: RAG
-- [ ] Perguntas de política/FAQ/promo recuperam o trecho correto no top-k
+- [x] Perguntas de política/FAQ/promo recuperam o trecho correto no top-k
 
 ### Phase 4: Triagem
 - [ ] T5: Abertura de ticket e transbordo com resumo estruturado

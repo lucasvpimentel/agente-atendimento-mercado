@@ -21,10 +21,10 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 
 ## Phase 3: RAG
 - [x] T6: Ingestão e índice FAISS (M) — dep: T1
-- [ ] T7: Tool de busca semântica (S) — dep: T6
+- [x] T7: Tool de busca semântica (S) — dep: T6
 
 ### Checkpoint: RAG
-- [ ] Perguntas-ouro de política/FAQ/promo recuperam o trecho correto no top-4
+- [x] Perguntas-ouro de política/FAQ/promo recuperam o trecho correto no top-4
 
 ## Phase 4: Triagem
 - [ ] T5: Abertura de ticket e transbordo com resumo estruturado (M) — dep: T4, T7
