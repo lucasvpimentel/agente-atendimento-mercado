@@ -61,16 +61,27 @@ def _docs_promocoes() -> list[Document]:
 
 def _docs_politicas() -> list[Document]:
     """O manual é Markdown (apesar da extensão .yaml): um documento por subseção (###),
-    mais um por seção (##) que tenha texto próprio (ex.: a matriz de triagem)."""
+    mais um por seção (##) com texto próprio e um por linha da matriz de transbordo."""
     docs, h2, h3, corpo = [], "", None, []
 
     def fecha():
-        texto = "\n".join(l for l in corpo if l.strip() != "---").strip()
-        if h2 and texto:
-            secao = h3 or h2
+        linhas = [l for l in corpo if l.strip() != "---"]
+        tabela = [l for l in linhas if l.lstrip().startswith("|")]
+        texto = "\n".join(l for l in linhas if not l.lstrip().startswith("|")).strip()
+        if not h2:
+            return
+        if texto:
             docs.append(Document(
                 f"Manual de Políticas Operacionais - {h2}\n{h3 + chr(10) if h3 else ''}\n{texto}",
-                metadata={"fonte": "politica", "secao": secao}))
+                metadata={"fonte": "politica", "secao": h3 or h2}))
+        for linha_tabela in tabela[2:]:  # pula cabeçalho e separador
+            situacao, severidade, fila, gatilhos = (
+                c.strip().replace("**", "").replace("`", "") for c in linha_tabela.strip().strip("|").split("|"))
+            docs.append(Document(
+                f"Transbordo para atendimento humano - situação: {situacao}\n"
+                f"Severidade: {severidade}\nFila de atendimento: {fila}\nGatilhos: {gatilhos}",
+                metadata={"fonte": "politica", "secao": f"{h2} - {situacao}", "escalar_humano": True,
+                          "severidade": severidade, "departamento_escalonamento": fila}))
 
     for linha in ARQ_POLITICAS.read_text(encoding="utf-8").splitlines():
         m = re.match(r"(##|###) (.+)", linha)

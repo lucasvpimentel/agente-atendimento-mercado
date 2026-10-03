@@ -11,7 +11,7 @@ def _por_fonte(docs):
 
 def test_um_documento_por_entrada_logica():
     contagem = _por_fonte(carregar_documentos())
-    assert contagem == {"faq": 10, "promocao": 4, "politica": 8, "empresa": 3}
+    assert contagem == {"faq": 10, "promocao": 4, "politica": 13, "empresa": 3}
 
 
 def test_todo_documento_tem_fonte_e_texto():
@@ -35,10 +35,15 @@ def test_politica_nao_corta_regra_ao_meio_e_traz_o_titulo():
     assert all(len(d.page_content) < 2500 for d in docs)
 
 
-def test_matriz_de_transbordo_vira_documento_proprio():
+def test_matriz_de_transbordo_vira_um_documento_por_situacao():
     docs = [d for d in carregar_documentos() if d.metadata["fonte"] == "politica"]
-    matriz = next(d for d in docs if "sac_emergencial" in d.page_content)
-    assert "Intoxicação" in matriz.page_content and "financeiro_cobranca" in matriz.page_content
+    linhas = [d for d in docs if "departamento_escalonamento" in d.metadata]
+    assert len(linhas) == 5
+    intoxicacao = next(d for d in linhas if d.metadata["departamento_escalonamento"] == "sac_emergencial")
+    assert "Intoxicação" in intoxicacao.page_content and "Vômito" in intoxicacao.page_content
+    assert intoxicacao.metadata["escalar_humano"] is True
+    assert intoxicacao.metadata["severidade"] == "Crítica"
+    assert {d.metadata["departamento_escalonamento"] for d in linhas} >= {"financeiro_cobranca", "sac_logistica"}
 
 
 def test_promocao_traz_itens_precos_regras_e_vigencia():
