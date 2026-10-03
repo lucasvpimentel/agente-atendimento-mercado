@@ -15,9 +15,9 @@ Sua primeira tarefa é criar a camada de banco de dados relacional (SQLite):
 2. Crie um script de automação `setup_db.py` que:
    - Inicialize o banco `supermercado.db` executando o `schema.sql`.
    - Carregue e popule os dados a partir dos arquivos YAML existentes:
-     - `catalogo_produtos_150.yaml` -> tabela `produtos`
-     - `clientes_cadastrados.yaml` -> tabela `clientes`
-     - `pedidos_tickets_sac.yaml` -> tabelas `pedidos`, `pedido_itens` e `tickets`
+     - `data/estruturados/cat_logo_de_produtos_e_estoque_150_itens.yaml` -> tabela `produtos`
+     - `data/estruturados/base_de_clientes_cadastrados.yaml` -> tabela `clientes`
+     - `data/estruturados/hist_rico_de_pedidos_mockados.yaml` -> tabelas `pedidos`, `pedido_itens` e `tickets` (os tickets vêm das `ocorrencias` dos pedidos)
    - Valide e exiba no console a quantidade de registros inseridos em cada tabela.
 Por favor, gere o código completo e executável de `schema.sql` e `setup_db.py`.
 ```
@@ -38,9 +38,9 @@ O sistema atua como ponto único de contato digital no atendimento ao cliente de
                      /                                \
                     ▼                                  ▼
          [ FAISS Vector Store ]                [ SQLite Engine ]
-        - politicas_operacionais.md           - produtos (150 itens)
-        - faq_supermercado.yaml               - clientes (cadastros e fidelidade)
-        - promocoes_ativas.yaml               - pedidos e pedido_itens
+        - manual_de_pol_ticas_operacionais    - produtos (162 itens)
+        - base_de_conhecimento (FAQ+empresa)  - clientes (cadastros e fidelidade)
+        - promo_es_ativas                     - pedidos e pedido_itens
                                               - tickets (SAC / Transbordo)
 ```
 
@@ -50,13 +50,13 @@ O sistema atua como ponto único de contato digital no atendimento ao cliente de
 
 | Formato | Artefato | Justificativa Arquitetural |
 | --- | --- | --- |
-| **SQLite (`.db`)** | `produtos` (150 itens) | Requer precisão numérica, checagem exata de estoque (`estoque > 0`) e filtros determinísticos por categoria. |
+| **SQLite (`.db`)** | `produtos` (162 itens) | Requer precisão numérica, checagem exata de estoque (`estoque > 0`) e filtros determinísticos por categoria. |
 | **SQLite (`.db`)** | `clientes` | Permite lookup exato por CPF, telefone ou ID para validação de identidade e clube de fidelidade. |
 | **SQLite (`.db`)** | `pedidos` e `pedido_itens` | Relacionamento 1:N com integridade referencial para cálculo de totais, itens e rastreamento de entregas. |
 | **SQLite (`.db`)** | `tickets` | Gerenciamento de estado transacional (`aberto`/`resolvido`), histórico de chamados e filas de transbordo. |
-| **Markdown (`.md`)** | `politicas_operacionais.md` | Texto denso e não estruturado (regras de troca, cadeia de frio, estorno), ideal para chunking e busca vetorial no FAISS. |
-| **YAML (`.yaml`)** | `faq_supermercado.yaml` | Metadados semiestruturados com perguntas frequentes, canais de SAC, endereços físicos e tags semânticas para o RAG. |
-| **YAML (`.yaml`)** | `promocoes_ativas.yaml` | Campanhas vigentes, regras de elegibilidade e etiquetas de desconto para consulta semântica e contextual. |
+| **YAML (`.yaml`, conteúdo Markdown)** | `manual_de_pol_ticas_operacionais.yaml` | Texto denso e não estruturado (regras de troca, cadeia de frio, estorno), ideal para chunking e busca vetorial no FAISS. |
+| **YAML (`.yaml`)** | `base_de_conhecimento_supermercado.yaml` | Metadados semiestruturados com perguntas frequentes, canais de SAC, endereços físicos e tags semânticas para o RAG. |
+| **YAML (`.yaml`)** | `promo_es_ativas.yaml` | Campanhas vigentes, regras de elegibilidade e etiquetas de desconto para consulta semântica e contextual. |
 
 ---
 
@@ -233,7 +233,7 @@ CREATE INDEX IF NOT EXISTS idx_tickets_cliente ON tickets(cliente_id);
 ## 6. Funcionalidades Centrais do Agente
 
 1. **Consulta de Estoque e Localização:**
-   * Verifica via SQL o preço, unidade e saldo de qualquer um dos 150 itens, orientando o cliente sobre o corredor/seção.
+   * Verifica via SQL o preço, unidade e saldo de qualquer um dos 162 itens, orientando o cliente sobre o corredor/seção.
 
 2. **Sugestão Inteligente de Substituição:**
    * Detecta produtos com saldo `0` (`disponivel = 0`) e faz busca automática por itens similares com estoque positivo na mesma categoria.
@@ -242,7 +242,38 @@ CREATE INDEX IF NOT EXISTS idx_tickets_cliente ON tickets(cliente_id);
    * Consulta status em tempo real (`em_separacao`, `em_rota`, `entregue`), motorista e previsão de entrega baseando-se no código do pedido.
 
 4. **Resolução de Dúvidas Operacionais (RAG):**
-   * Recupera semanticamente trechos de `politicas_operacionais.md`, `faq_supermercado.yaml` e `promocoes_ativas.yaml` via FAISS.
+   * Recupera semanticamente trechos de `manual_de_pol_ticas_operacionais.yaml`, `base_de_conhecimento_supermercado.yaml` e `promo_es_ativas.yaml` via FAISS.
 
 5. **Triagem e Transbordo com Resumo Estruturado:**
    * Quando identifica um cenário fora do escopo automático (ex.: item avariado, produto vencido ou reclamação grave), gera um ticket na tabela `tickets` com prioridade alta/crítica e transfere o contexto consolidado para a fila de atendimento humano.
+
+---
+
+## 7. Implementação: divergências e decisões
+
+Registro do que foi construído (ver [README](../README.md) e [tasks/plan.md](../tasks/plan.md)) e do que difere do texto original desta especificação.
+
+### 7.1. Divergências em relação aos dados reais
+
+| Especificado | Real | Tratamento |
+| --- | --- | --- |
+| `politicas_operacionais.md` | `manual_de_pol_ticas_operacionais.yaml` (Markdown com extensão `.yaml`) | Parser por títulos `##`/`###`; arquivo não alterado |
+| 150 produtos | 162 produtos no catálogo | Aceito; seções 3 e 6 atualizadas |
+| Arquivo `pedidos_tickets_sac.yaml` | Não existe; só há pedidos com `ocorrencias` | Tickets gerados das ocorrências (1 ticket); pedido cancelado sem endereço, subtotal ou pagamento recebe valores derivados |
+| YAML de pedidos válido | Usa `* ` no lugar de `- ` e deixa campos do pedido dentro do último item | Normalização na leitura (`setup_db.py`) |
+| CPF identifica o cliente | CPF mascarado (`123.***.***-01`) | Identidade por `cliente_id` fixado na sessão |
+
+### 7.2. Decisões de arquitetura
+
+- **Ferramentas antes do agente.** Cada capacidade é uma função Python testável sem LLM (`src/tools/`); o agente só as registra (`src/agent_tools.py`).
+- **Cliente fixado na sessão.** Ferramentas de pedidos e tickets recebem o `cliente_id` da conversa; o modelo não escolhe de quem são os dados.
+- **Substituição com IA restrita.** O SQL filtra 10 candidatos (mesma categoria, com estoque, mesma unidade, preço próximo); a IA só vê esses, em formato compacto, e os SKUs devolvidos são validados. Falha da API cai na regra determinística.
+- **RAG por unidade lógica.** 30 documentos: 10 de FAQ, 4 de campanhas, 13 do manual (subseções + uma por linha da matriz de transbordo) e 3 da empresa (contatos e lojas). Embeddings `text-embedding-3-small`; índice FAISS em `data/index/`.
+- **Relevância.** `buscar_conhecimento` devolve só trechos com similaridade de cosseno ≥ `RAG_LIMIAR` (0,2); sem trecho relevante o agente não responde por conta própria.
+- **Ticket.** `abrir_ticket` é a única ferramenta que escreve no banco: valida cliente, pedido e enums, eleva a prioridade mínima de motivos graves para `alta`, evita duplicata de ticket aberto (mesmo pedido e motivo) e grava em transação.
+- **Interface.** Streamlit com seletor de cliente (simulação de autenticação), sugestões clicáveis, cupom destacado para o protocolo do ticket e verificação de ambiente na abertura.
+
+### 7.3. Validação
+
+- Testes automatizados em `tests/` (unitários sem rede e de integração com a API da OpenAI).
+- Avaliação ponta a ponta em `eval/` com 18 perguntas em 7 categorias (estoque, substituição, pedido, política, ticket, privacidade, fora de escopo), executada sobre uma cópia do banco.

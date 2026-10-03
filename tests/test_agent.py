@@ -49,3 +49,4 @@ def test_prompt_identifica_o_cliente_e_proibe_inventar_dados():
     com = montar_prompt("CLI-1001")
     assert "CLI-1001" in com and "Nunca invente" in com and "abrir_ticket" in com
     assert "NÃO está identificado" in montar_prompt(None)
+    assert "sem perguntar antes" in com  # substitutos vêm junto com o aviso de indisponibilidade

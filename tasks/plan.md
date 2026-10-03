@@ -85,7 +85,7 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 - [x] Os 5 fluxos da seção 6 funcionam na UI
 
 ### Phase 6: Qualidade
-- [ ] T10: Avaliação, README e atualização da spec
+- [x] T10: Avaliação, README e atualização da spec
 
 ### Checkpoint: Completo
 - [ ] Critérios de aceite todos atendidos; pronto para revisão

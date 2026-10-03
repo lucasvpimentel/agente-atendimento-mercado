@@ -37,7 +37,7 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 - [x] Os 5 fluxos da seção 6 da spec funcionam na UI
 
 ## Phase 6: Qualidade
-- [ ] T10: Avaliação, README e atualização da spec (M) — dep: T9
+- [x] T10: Avaliação, README e atualização da spec (M) — dep: T9
 
 ### Checkpoint: Completo
 - [ ] Critérios de aceite atendidos; revisão humana
