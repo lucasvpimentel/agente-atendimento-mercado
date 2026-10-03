@@ -9,7 +9,7 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 - [x] T1: Ambiente, dependências e módulo de acesso ao banco (S)
 
 ### Checkpoint: Fundação
-- [ ] `pip install -r requirements.txt` limpo; `python setup_db.py` ok; `pytest` roda
+- [x] `pip install -r requirements.txt` limpo; `python setup_db.py` ok; `pytest` roda
 
 ## Phase 2: Ferramentas SQL
 - [ ] T2: Consulta de estoque e localização (S) — dep: T1
