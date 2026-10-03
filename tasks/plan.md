@@ -61,7 +61,7 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 
 ### Phase 2: Ferramentas SQL (uma fatia por funcionalidade)
 - [x] T2: Consulta de estoque e localização
-- [ ] T3: Sugestão de substituição
+- [x] T3: Sugestão de substituição
 - [ ] T4: Rastreamento de pedidos
 
 ### Checkpoint: SQL

@@ -13,7 +13,7 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 
 ## Phase 2: Ferramentas SQL
 - [x] T2: Consulta de estoque e localização (S) — dep: T1
-- [ ] T3: Sugestão de substituição (S) — dep: T2
+- [x] T3: Sugestão de substituição (S) — dep: T2
 - [ ] T4: Rastreamento de pedidos (S) — dep: T1
 
 ### Checkpoint: SQL
