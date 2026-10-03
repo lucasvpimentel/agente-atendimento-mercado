@@ -12,7 +12,7 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 - [x] `pip install -r requirements.txt` limpo; `python setup_db.py` ok; `pytest` roda
 
 ## Phase 2: Ferramentas SQL
-- [ ] T2: Consulta de estoque e localização (S) — dep: T1
+- [x] T2: Consulta de estoque e localização (S) — dep: T1
 - [ ] T3: Sugestão de substituição (S) — dep: T2
 - [ ] T4: Rastreamento de pedidos (S) — dep: T1
 

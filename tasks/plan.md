@@ -60,7 +60,7 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 - [ ] `pip install -r requirements.txt` limpo; `python setup_db.py` ok; `pytest` roda
 
 ### Phase 2: Ferramentas SQL (uma fatia por funcionalidade)
-- [ ] T2: Consulta de estoque e localização
+- [x] T2: Consulta de estoque e localização
 - [ ] T3: Sugestão de substituição
 - [ ] T4: Rastreamento de pedidos
 
