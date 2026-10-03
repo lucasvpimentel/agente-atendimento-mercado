@@ -6,7 +6,7 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 - [x] Kickoff: `schema.sql` + `setup_db.py` + `supermercado.db`; YAMLs em `data/`
 
 ## Phase 1: Fundação
-- [ ] T1: Ambiente, dependências e módulo de acesso ao banco (S)
+- [x] T1: Ambiente, dependências e módulo de acesso ao banco (S)
 
 ### Checkpoint: Fundação
 - [ ] `pip install -r requirements.txt` limpo; `python setup_db.py` ok; `pytest` roda

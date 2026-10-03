@@ -54,7 +54,7 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 ## Task List
 
 ### Phase 1: Fundação
-- [ ] T1: Ambiente, dependências e módulo de acesso ao banco
+- [x] T1: Ambiente, dependências e módulo de acesso ao banco
 
 ### Checkpoint: Fundação
 - [ ] `pip install -r requirements.txt` limpo; `python setup_db.py` ok; `pytest` roda
