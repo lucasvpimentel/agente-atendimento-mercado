@@ -14,10 +14,10 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 ## Phase 2: Ferramentas SQL
 - [x] T2: Consulta de estoque e localização (S) — dep: T1
 - [x] T3: Sugestão de substituição (S) — dep: T2
-- [ ] T4: Rastreamento de pedidos (S) — dep: T1
+- [x] T4: Rastreamento de pedidos (S) — dep: T1
 
 ### Checkpoint: SQL
-- [ ] Tools T2–T4 passam nos testes contra o banco real, sem LLM
+- [x] Tools T2–T4 passam nos testes contra o banco real, sem LLM
 
 ## Phase 3: RAG
 - [ ] T6: Ingestão e índice FAISS (M) — dep: T1

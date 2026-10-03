@@ -62,10 +62,10 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 ### Phase 2: Ferramentas SQL (uma fatia por funcionalidade)
 - [x] T2: Consulta de estoque e localização
 - [x] T3: Sugestão de substituição
-- [ ] T4: Rastreamento de pedidos
+- [x] T4: Rastreamento de pedidos
 
 ### Checkpoint: SQL
-- [ ] Os 3 conjuntos de tools passam nos testes contra o banco real, sem LLM
+- [x] Os 3 conjuntos de tools passam nos testes contra o banco real, sem LLM
 
 ### Phase 3: RAG
 - [ ] T6: Ingestão e índice FAISS
