@@ -68,7 +68,7 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 - [x] Os 3 conjuntos de tools passam nos testes contra o banco real, sem LLM
 
 ### Phase 3: RAG
-- [ ] T6: Ingestão e índice FAISS
+- [x] T6: Ingestão e índice FAISS
 - [ ] T7: Tool de busca semântica
 
 ### Checkpoint: RAG

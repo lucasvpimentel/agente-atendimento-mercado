@@ -20,7 +20,7 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 - [x] Tools T2–T4 passam nos testes contra o banco real, sem LLM
 
 ## Phase 3: RAG
-- [ ] T6: Ingestão e índice FAISS (M) — dep: T1
+- [x] T6: Ingestão e índice FAISS (M) — dep: T1
 - [ ] T7: Tool de busca semântica (S) — dep: T6
 
 ### Checkpoint: RAG
