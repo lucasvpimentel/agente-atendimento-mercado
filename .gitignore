@@ -12,3 +12,6 @@ venv/
 
 # Índice FAISS gerado
 data/index/
+
+# Config local do Claude Code (caminhos da máquina)
+.claude/

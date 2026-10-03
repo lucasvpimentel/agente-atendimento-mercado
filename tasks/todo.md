@@ -31,10 +31,10 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 
 ## Phase 5: Agente e interface
 - [x] T8: Agente LangChain com todas as tools (M) — dep: T2, T3, T4, T5, T7
-- [ ] T9: Interface Streamlit (S) — dep: T8
+- [x] T9: Interface Streamlit (S) — dep: T8
 
 ### Checkpoint: End-to-end
-- [ ] Os 5 fluxos da seção 6 da spec funcionam na UI
+- [x] Os 5 fluxos da seção 6 da spec funcionam na UI
 
 ## Phase 6: Qualidade
 - [ ] T10: Avaliação, README e atualização da spec (M) — dep: T9

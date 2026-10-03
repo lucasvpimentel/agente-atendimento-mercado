@@ -79,10 +79,10 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 
 ### Phase 5: Agente e interface
 - [x] T8: Agente LangChain com todas as tools
-- [ ] T9: Interface Streamlit
+- [x] T9: Interface Streamlit
 
 ### Checkpoint: End-to-end
-- [ ] Os 5 fluxos da seção 6 funcionam na UI
+- [x] Os 5 fluxos da seção 6 funcionam na UI
 
 ### Phase 6: Qualidade
 - [ ] T10: Avaliação, README e atualização da spec
