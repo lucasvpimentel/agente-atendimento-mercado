@@ -75,7 +75,7 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 - [x] Perguntas de política/FAQ/promo recuperam o trecho correto no top-k
 
 ### Phase 4: Triagem
-- [ ] T5: Abertura de ticket e transbordo com resumo estruturado
+- [x] T5: Abertura de ticket e transbordo com resumo estruturado
 
 ### Phase 5: Agente e interface
 - [ ] T8: Agente LangChain com todas as tools
