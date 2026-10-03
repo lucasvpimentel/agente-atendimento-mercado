@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&family=DM+Mono:wght@500&display=swap");
+
+:root {
+  --papel: #F2F5F1;
+  --superficie: #FFFFFF;
+  --tinta: #12221B;
+  --tinta-suave: #4A5D54;
+  --verde: #0E6B4D;
+  --verde-claro: #E1F0E8;
+  --etiqueta: #FFD43B;
+  --linha: #D5DED8;
+  --fonte-titulo: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --fonte-corpo: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --fonte-mono: "DM Mono", ui-monospace, Consolas, monospace;
+}
+
+html, body, .stApp, [data-testid="stAppViewContainer"] { background: var(--papel); font-family: var(--fonte-corpo); color: var(--tinta); }
+h1, h2, h3 { font-family: var(--fonte-titulo); letter-spacing: -0.02em; }
+
+/* menos cromo do Streamlit */
+#MainMenu, footer, [data-testid="stDecoration"] { display: none; }
+header[data-testid="stHeader"] { background: transparent; }
+[data-testid="stMainBlockContainer"] { max-width: 760px; padding-top: 1.5rem; padding-bottom: 6rem; }
+
+/* marca: etiqueta de preço */
+.marca { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.25rem; }
+.etiqueta {
+  position: relative; display: inline-block; padding: .35rem .8rem .35rem 1.6rem; background: var(--etiqueta);
+  color: var(--tinta); font: 800 1.05rem/1 var(--fonte-titulo); letter-spacing: -0.01em;
+  clip-path: polygon(0 50%, 12px 0, 100% 0, 100% 100%, 12px 100%); transform: rotate(-2deg);
+}
+.etiqueta::before { content: ""; position: absolute; left: 11px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%; background: var(--papel); }
+.marca-sub { font-weight: 600; color: var(--tinta-suave); }
+
+/* tela inicial */
+.saudacao h1 { font-size: clamp(2rem, 6vw, 2.8rem); font-weight: 800; margin: 1.5rem 0 .25rem; padding: 0; }
+.saudacao p { color: var(--tinta-suave); font-size: 1.05rem; margin: 0 0 1.25rem; }
+
+/* sugestões e botões */
+.stButton > button {
+  width: 100%; min-height: 3.1rem; text-align: left; justify-content: flex-start; padding: .65rem 1rem; background: var(--superficie);
+  color: var(--tinta); border: 1px solid var(--linha); border-radius: 14px; font-weight: 500; transition: border-color .15s, box-shadow .15s;
+}
+.stButton > button > div { width: 100%; justify-content: flex-start; }
+.stButton > button p { text-align: left; }
+.stButton > button:hover { border-color: var(--verde); box-shadow: 0 2px 10px rgba(14, 107, 77, .12); color: var(--tinta); }
+.stButton > button:focus-visible { outline: 3px solid var(--verde); outline-offset: 2px; }
+
+/* mensagens */
+[data-testid="stChatMessage"] {
+  background: var(--superficie); border: 1px solid var(--linha); border-radius: 18px; padding: 1rem 1.1rem; margin-bottom: .75rem;
+  animation: entra .25s ease-out;
+}
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) { background: var(--verde-claro); border-color: transparent; }
+[data-testid="stChatMessageAvatarUser"] { background: var(--verde); color: #fff; border-radius: 10px; }
+[data-testid="stChatMessageAvatarAssistant"] { background: var(--etiqueta); color: var(--tinta); border-radius: 10px; }
+@keyframes entra { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { [data-testid="stChatMessage"] { animation: none; } .stButton > button { transition: none; } }
+
+/* ferramentas usadas */
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0 .5rem; }
+.chip { font-size: .78rem; font-weight: 600; color: var(--verde); background: var(--verde-claro); padding: .2rem .65rem; border-radius: 999px; }
+
+/* cupom do ticket: a assinatura do app */
+.cupom {
+  position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: .3rem; margin: .8rem 0 .2rem; padding: .9rem 1.2rem;
+  background: var(--etiqueta); color: var(--tinta); border-radius: 6px;
+}
+.cupom::before, .cupom::after { content: ""; position: absolute; top: 50%; width: 16px; height: 16px; margin-top: -8px; border-radius: 50%; background: var(--superficie); }
+.cupom::before { left: -8px; }
+.cupom::after { right: -8px; }
+.cupom-rotulo { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.cupom-codigo { font: 500 1.5rem/1.2 var(--fonte-mono); letter-spacing: .04em; padding: .1rem 0; border-top: 2px dashed rgba(18, 34, 27, .35); border-bottom: 2px dashed rgba(18, 34, 27, .35); width: 100%; }
+.cupom-nota { font-size: .85rem; }
+
+/* barra lateral */
+[data-testid="stSidebar"] { background: var(--superficie); border-right: 1px solid var(--linha); }
+.rotulo { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--tinta-suave); margin: 0 0 .25rem; }
+.cartao { display: flex; flex-direction: column; gap: .2rem; margin: .75rem 0 1rem; padding: .85rem 1rem; background: var(--verde-claro); border-radius: 14px; }
+.cartao strong { font: 700 1.05rem var(--fonte-titulo); }
+.cartao span { font-size: .85rem; color: var(--verde); font-weight: 600; }
+
+.aviso { margin-top: 1rem; font-size: .8rem; color: var(--tinta-suave); text-align: center; }
+
+[data-testid="stChatInput"] { border-radius: 16px; }
+[data-testid="stChatInput"]:focus-within { box-shadow: 0 0 0 3px rgba(14, 107, 77, .35); }
