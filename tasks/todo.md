@@ -30,7 +30,7 @@ Detalhes e critérios em [plan.md](plan.md). Ordem de execução = ordem da list
 - [x] T5: Abertura de ticket e transbordo com resumo estruturado (M) — dep: T4, T7
 
 ## Phase 5: Agente e interface
-- [ ] T8: Agente LangChain com todas as tools (M) — dep: T2, T3, T4, T5, T7
+- [x] T8: Agente LangChain com todas as tools (M) — dep: T2, T3, T4, T5, T7
 - [ ] T9: Interface Streamlit (S) — dep: T8
 
 ### Checkpoint: End-to-end

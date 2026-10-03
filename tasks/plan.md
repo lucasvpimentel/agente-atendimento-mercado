@@ -78,7 +78,7 @@ T1 Ambiente/config ──► (schema.sql + setup_db.py ✔)
 - [x] T5: Abertura de ticket e transbordo com resumo estruturado
 
 ### Phase 5: Agente e interface
-- [ ] T8: Agente LangChain com todas as tools
+- [x] T8: Agente LangChain com todas as tools
 - [ ] T9: Interface Streamlit
 
 ### Checkpoint: End-to-end
