@@ -1,0 +1,82 @@
+campanhas_ativas:
+  - id: "CAMP-FDS-LIMPEZA"
+    nome: "Fim de Semana da Casa Brilhando"
+    vigencia_inicio: "2026-10-02"
+    vigencia_fim: "2026-10-05"
+    tipo_beneficio: "Desconto Progressivo e Leve Mais por Menos"
+    descricao: "Ofertas em todo o setor de limpeza e lavanderia com descontos automáticos no caixa."
+    itens:
+      - sku: "LIMP-001"
+        nome: "Sabão em Pó Omo Lavagem Perfeita 1,6kg"
+        preco_regular: 24.90
+        preco_promocional: 19.90
+        regra: "Preço exclusivo para membros do Clube Bom Preço (qualquer categoria)."
+      - sku: "LIMP-004"
+        nome: "Detergente Líquido Neutro 500ml Ypê"
+        preco_regular: 2.49
+        regra: "Leve 6 unidades e pague R$ 1,99 em cada uma."
+      - sku: "LIMP-003"
+        nome: "Amaciante Concentrado Downy Brisa de Verão 1L"
+        preco_regular: 19.90
+        preco_promocional: 15.99
+        regra: "Limite de 4 frascos por CPF cadastrado."
+
+  - id: "CAMP-CHURRAS-BEBIDA"
+    nome: "Festival de Carnes & Cervejas Especiais"
+    vigencia_inicio: "2026-10-01"
+    vigencia_fim: "2026-10-04"
+    tipo_beneficio: "Etiqueta Amarela Direta"
+    descricao: "Descontos de balcão no açougue e packs de cervejas selecionadas."
+    itens:
+      - sku: "CARN-001"
+        nome: "Picanha Bovina Resfriada Nacional"
+        preco_regular: 69.90
+        preco_promocional: 59.90
+        unidade: "kg"
+        regra: "Válido enquanto durar o lote de corte resfriado."
+      - sku: "BEBI-004"
+        nome: "Cerveja Heineken Puro Malte Long Neck 330ml"
+        preco_regular: 6.89
+        preco_promocional: 5.99
+        regra: "A partir de 6 unidades, o valor unitário cai para R$ 5,49 para clientes Clube Ouro e Prata."
+      - sku: "CARN-012"
+        nome: "Linguiça Toscana Sadia 1kg"
+        preco_regular: 24.90
+        preco_promocional: 19.90
+        regra: "Preço válido para pagamentos via PIX, Débito ou Dinheiro."
+
+  - id: "CAMP-HORTI-FRESCO"
+    nome: "Feira de Fim de Semana"
+    vigencia_inicio: "2026-10-03"
+    vigencia_fim: "2026-10-04"
+    tipo_beneficio: "Desconto Direto no Peso"
+    descricao: "Frutas e legumes frescos abastecidos na madrugada de sábado."
+    itens:
+      - sku: "HORT-001"
+        nome: "Banana Prata Climatizada"
+        preco_regular: 6.99
+        preco_promocional: 4.99
+        unidade: "kg"
+        regra: "Oferta livre para todos os clientes, sem necessidade de cadastro."
+      - sku: "HORT-002"
+        nome: "Tomate Carmem Selecionado"
+        preco_regular: 8.49
+        preco_promocional: 5.99
+        unidade: "kg"
+        regra: "Limite de até 5kg por cupom fiscal emitido."
+      - sku: "HORT-018"
+        nome: "Uva Thompson Sem Semente 500g"
+        preco_regular: 12.99
+        preco_promocional: 9.99
+        unidade: "un"
+        regra: "Exclusivo no App e para pedidos com modalidade Entrega Agendada."
+
+  - id: "CAMP-FIDELIDADE-OURO"
+    nome: "Vantagens Exclusivas Clube Ouro"
+    vigencia_inicio: "2026-10-01"
+    vigencia_fim: "2026-10-31"
+    tipo_beneficio: "Frete Grátis e Pontuação Turbinada"
+    descricao: "Benefícios contínuos no mês de outubro para clientes fidelizados nível Ouro."
+    itens:
+      - regra: "Frete grátis automático em qualquer compra com valor total acima de R$ 120,00."
+      - regra: "Pontos em dobro creditados no programa de recompensas para compras na Adega e Padaria."

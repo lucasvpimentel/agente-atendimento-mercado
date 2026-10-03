@@ -1,0 +1,237 @@
+empresa:
+  nome: "Supermercado Bom Preço & Cia"
+  setor: "Varejo Alimentar / Supermercadista"
+  cnpj: "12.345.678/0001-90"
+  versao_base: "2.0.0"
+  
+  contatos:
+    central_telefonica: "(85) 3456-7890"
+    whatsapp_sac: "(85) 99876-5432"
+    email_suporte: "sac@bomprecocia.com.br"
+    ouvidoria: "0800 720 0199"
+    horario_atendimento_sac: "Segunda a sábado, das 07h30 às 20h30"
+
+  unidades:
+    - id: "loja-01"
+      nome: "Loja 1 - Matriz Aldeota"
+      endereco: "Av. Santos Dumont, 2850 - Aldeota, Fortaleza - CE, CEP 60150-161"
+      telefone: "(85) 3456-7891"
+      estacionamento: "Gratuito por até 2h com cupom de compra a partir de R$ 30,00"
+    - id: "loja-02"
+      nome: "Loja 2 - Filial Sul"
+      endereco: "Av. Washington Soares, 4100 - Sapiranga, Fortaleza - CE, CEP 60833-005"
+      telefone: "(85) 3456-7892"
+      estacionamento: "Gratuito com vagas cobertas e carregador para carros elétricos"
+
+categorias:
+  - id: "compras_delivery"
+    nome: "Compras Online e Delivery"
+  - id: "trocas_reembolsos"
+    nome: "Trocas, Reembolsos e Avarias"
+  - id: "clube_vantagens"
+    nome: "Clube de Descontos e Ofertas"
+  - id: "pagamentos_financeiro"
+    nome: "Formas de Pagamento e Faturas"
+  - id: "funcionamento_loja"
+    nome: "Horários e Serviços de Loja"
+
+itens_faq:
+  # ==========================================
+  # 1. Prazo e Frete de Entrega
+  # ==========================================
+  - id: "FAQ-001"
+    categoria_id: "compras_delivery"
+    pergunta: "Qual é o valor do frete e o prazo de entrega das compras online?"
+    resposta: >
+      O prazo e o frete dependem da modalidade escolhida no fechamento:
+      a 'Entrega Expressa' é realizada em até 2 horas para compras concluídas
+      até as 18h com taxa fixa de R$ 14,90. A 'Entrega Agendada' permite escolher
+      janelas de 3 horas com custo de R$ 8,90, sendo gratuita para pedidos com
+      valor acima de R$ 250,00.
+    palavras_chave:
+      - "valor do frete"
+      - "prazo de entrega"
+      - "entrega expressa"
+      - "frete gratis"
+      - "tempo de entrega"
+    escalar_humano: false
+    complexidade: "baixa"
+
+  # ==========================================
+  # 2. Produto em Falta no Pedido Online
+  # ==========================================
+  - id: "FAQ-002"
+    categoria_id: "compras_delivery"
+    pergunta: "O que acontece se algum produto do meu pedido online estiver em falta?"
+    resposta: >
+      Ao finalizar seu pedido no site ou app, você pode selecionar se autoriza
+      a substituição por item de qualidade similar/mesma marca, se prefere que
+      o separador ligue antes de fechar o pacote ou se deseja o cancelamento do item.
+      Caso opte pelo cancelamento ou não aprove o similar, o valor correspondente
+      é estornado no mesmo meio de pagamento em até 48 horas.
+    palavras_chave:
+      - "produto em falta"
+      - "item esgotado"
+      - "substituicao de produto"
+      - "falta no estoque delivery"
+    escalar_humano: false
+    complexidade: "media"
+
+  # ==========================================
+  # 3. Pedido com Atraso ou Faltando Item (Escalonamento)
+  # ==========================================
+  - id: "FAQ-003"
+    categoria_id: "compras_delivery"
+    pergunta: "Meu pedido está com atraso ou recebi a sacola incompleta. Como resolver?"
+    resposta: >
+      Lamentamos o transtorno. Para acionar os separadores e a frota de entregadores,
+      por favor informe o número do seu pedido e o CPF do comprador. Nossa equipe de
+      logística entrará em contato para liberar um entregador com prioridade ou efetuar
+      o reembolso imediato dos itens ausentes.
+    palavras_chave:
+      - "pedido atrasado"
+      - "compra nao chegou"
+      - "veio faltando item"
+      - "sacola incompleta"
+    escalar_humano: true
+    departamento_escalonamento: "sac_logistica"
+    complexidade: "alta"
+
+  # ==========================================
+  # 4. Troca de Produto Vencido ou Avariado (Escalonamento)
+  # ==========================================
+  - id: "FAQ-004"
+    categoria_id: "trocas_reembolsos"
+    pergunta: "Recebi um produto com data de validade vencida ou avariado. Como pedir troca?"
+    resposta: >
+      Para itens perecíveis (como laticínios, hortifrúti ou carnes), solicitamos que
+      o contato ocorra em até 24 horas após o recebimento. Para mercadorias secas, o prazo
+      é de até 7 dias corridos. Tenha em mãos o cupom fiscal/número do pedido e envie uma foto
+      do produto avariado via WhatsApp para realizarmos o estorno integral ou a troca imediata.
+    palavras_chave:
+      - "produto estragado"
+      - "leite azedo"
+      - "carne com cheiro ruim"
+      - "produto vencido"
+      - "embalagem rompida"
+    escalar_humano: true
+    departamento_escalonamento: "sac_atendimento"
+    complexidade: "alta"
+
+  # ==========================================
+  # 5. Política de Troca por Desistência / Engano
+  # ==========================================
+  - id: "FAQ-005"
+    categoria_id: "trocas_reembolsos"
+    pergunta: "Comprei um produto por engano na loja. Posso fazer a troca?"
+    resposta: >
+      Sim. Mercadorias secas industrializadas e com lacre inviolado podem ser
+      trocadas no balcão de Atendimento ao Cliente em até 7 dias corridos a partir da
+      data da compra, mediante apresentação do cupom fiscal. Por motivos de controle
+      sanitário, não realizamos trocas por desistência de itens refrigerados, congelados
+      ou manipulados na padaria e frios.
+    palavras_chave:
+      - "comprei errado"
+      - "troca balcao"
+      - "devolucao de produto"
+      - "trocar mercadoria"
+    escalar_humano: false
+    complexidade: "baixa"
+
+  # ==========================================
+  # 6. Como Funciona o Clube de Vantagens
+  # ==========================================
+  - id: "FAQ-006"
+    categoria_id: "clube_vantagens"
+    pergunta: "Como faço para participar do Clube Bom Preço e garantir os descontos?"
+    resposta: >
+      O cadastro no Clube Bom Preço é gratuito e pode ser feito pelo nosso app
+      ou diretamente com o operador de caixa. Para garantir as ofertas com etiqueta
+      amarela na loja física ou online, basta digitar ou informar o CPF cadastrado
+      antes do registro do primeiro produto na esteira.
+    palavras_chave:
+      - "cadastrar no clube"
+      - "desconto no cpf"
+      - "etiqueta amarela"
+      - "clube bom preco"
+    escalar_humano: false
+    complexidade: "baixa"
+
+  # ==========================================
+  # 7. Dias de Promoções da Semana
+  # ==========================================
+  - id: "FAQ-007"
+    categoria_id: "clube_vantagens"
+    pergunta: "Quais são os dias de feira e promoções da semana no supermercado?"
+    resposta: >
+      Nosso calendário semanal de promoções fixas funciona da seguinte forma:
+      - Terça e Quarta Verde: Descontos no setor de hortifrúti fresco;
+      - Quinta da Carne: Ofertas em cortes especiais de bovinos, suínos e aves;
+      - Sexta dos Pescados e Cervejas: Ofertas em frutos do mar e bebidas artesanais;
+      - Fim de Semana da Limpeza: Descontos em produtos de higiene e lavanderia.
+    palavras_chave:
+      - "dia de feira"
+      - "quarta verde"
+      - "quinta da carne"
+      - "dia de promocao"
+      - "ofertas da semana"
+    escalar_humano: false
+    complexidade: "baixa"
+
+  # ==========================================
+  # 8. Formas de Pagamento e Vale-Alimentação
+  # ==========================================
+  - id: "FAQ-008"
+    categoria_id: "pagamentos_financeiro"
+    pergunta: "Quais são os meios de pagamento aceitos e quais cartões alimentação/refeição passam?"
+    resposta: >
+      Aceitamos dinheiro, PIX, cartões de débito e crédito (Visa, Mastercard,
+      Elo e Hipercard) e os seguintes vales-alimentação e refeição: VR Alimentação,
+      Ticket Alimentação, Sodexo/Pluxee, Alelo e Ben Visa Vale. No delivery, o PIX
+      é gerado diretamente no aplicativo e os cartões são pagos na maquininha levada pelo entregador.
+    palavras_chave:
+      - "passa cartao alelo"
+      - "aceita ticket"
+      - "vale alimentacao"
+      - "pix na entrega"
+      - "cartoes aceitos"
+    escalar_humano: false
+    complexidade: "baixa"
+
+  # ==========================================
+  # 9. 2ª Via de Cupom Fiscal / Nota Fiscal (NFC-e)
+  # ==========================================
+  - id: "FAQ-009"
+    categoria_id: "pagamentos_financeiro"
+    pergunta: "Como solicito a 2ª via da Nota Fiscal ou cupom fiscal das minhas compras?"
+    resposta: >
+      Caso tenha cadastrado o CPF na passagem pelo caixa, a 2ª via da Nota Fiscal Eletrônica
+      (NFC-e) pode ser consultada e baixada em PDF no aplicativo Bom Preço pelo menu
+      'Minhas Compras'. Em compras sem CPF, dirija-se ao SAC presencial da respectiva loja
+      com data, horário aproximado e comprovante do cartão utilizado.
+    palavras_chave:
+      - "segunda via cupom fiscal"
+      - "recibo de compra"
+      - "nota fiscal eletronica"
+      - "baixar nf"
+    escalar_humano: false
+    complexidade: "media"
+
+  # ==========================================
+  # 10. Horário de Funcionamento das Lojas Físicas
+  # ==========================================
+  - id: "FAQ-010"
+    categoria_id: "funcionamento_loja"
+    pergunta: "Qual é o horário de funcionamento das lojas físicas e atendimento aos domingos?"
+    resposta: >
+      Nossas duas lojas operam de segunda a sábado, das 07h00 às 22h00, e aos domingos
+      e feriados das 08h00 às 20h00. O açougue e a padaria funcionam durante todo o período
+      de abertura da loja. Não abrimos nos dias 1º de Janeiro, Sexta-Feira Santa e 25 de Dezembro.
+    palavras_chave:
+      - "horario de funcionamento"
+      - "que horas fecha"
+      - "que horas abre"
+      - "aberto domingo"
+      - "abre feriado"
+    escalar_humano: false
+    complexidade: "baixa"

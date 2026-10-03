@@ -1,0 +1,119 @@
+pedidos:
+
+* pedido_id: "PED-84920"
+  cliente_id: "CLI-1001"
+  cliente_nome: "Mariana Souza Ribeiro"
+  data_pedido: "2026-10-03T07:15:00"
+  status: "em_separacao"
+  canal: "App Mobile"
+  previsao_entrega: "2026-10-03T10:30:00"
+  endereco_entrega: "Rua Silva Jatahy, 450, Ap 802 - Meireles"
+  itens:
+
+  * sku: "LATI-001"
+    nome: "Leite UHT Integral 1L Piracanjuba"
+    quantidade: 6
+    preco_unitario: 5.49
+
+  * sku: "PADA-002"
+    nome: "Pão de Forma Tradicional 450g Bauducco"
+    quantidade: 2
+    preco_unitario: 8.29
+
+  * sku: "HORT-001"
+    nome: "Banana Prata Climatizada"
+    quantidade: 1.5
+    preco_unitario: 6.99
+    subtotal: 59.99
+    taxa_entrega: 12.00
+    desconto: 5.00
+    total: 66.99
+    forma_pagamento: "PIX"
+    observacao_cliente: "Deixar na portaria com Seu Antônio."
+
+* pedido_id: "PED-84891"
+  cliente_id: "CLI-1002"
+  cliente_nome: "Carlos Eduardo Barreto"
+  data_pedido: "2026-10-02T18:40:00"
+  status: "entregue"
+  data_entrega: "2026-10-02T19:55:00"
+  canal: "Site Web"
+  endereco_entrega: "Av. Beira Mar, 2100, Ap 1201 - Meireles"
+  itens:
+
+  * sku: "BEBI-004"
+    nome: "Cerveja Heineken Puro Malte Long Neck 330ml"
+    quantidade: 12
+    preco_unitario: 6.89
+
+  * sku: "CARN-001"
+    nome: "Picanha Bovina Resfriada Nacional"
+    quantidade: 1.2
+    preco_unitario: 69.90
+
+  * sku: "MERC-010"
+    nome: "Sal Refinado 1kg Cisne"
+    quantidade: 1
+    preco_unitario: 2.99
+    subtotal: 169.45
+    taxa_entrega: 0.00
+    desconto: 15.00
+    total: 154.45
+    forma_pagamento: "Cartão de Crédito (Mastercard)"
+    ocorrencias:
+
+  * tipo: "reclamacao_avaria"
+    descricao: "Cliente reportou que 1 garrafa de cerveja veio trincada na sacola."
+    resolucao: "Pendente de estorno"
+
+* pedido_id: "PED-84915"
+  cliente_id: "CLI-1003"
+  cliente_nome: "Fernanda Albuquerque Lima"
+  data_pedido: "2026-10-03T06:30:00"
+  status: "em_rota"
+  motorista: "Marcos Vinicius (Moto-furgão Placa HOS-4921)"
+  previsao_entrega: "2026-10-03T09:00:00"
+  canal: "App Mobile"
+  endereco_entrega: "Rua Canuto de Aguiar, 890 - Varjota"
+  itens:
+
+  * sku: "LATI-004"
+    nome: "Queijo Muçarela Fatiado 200g Tirolez"
+    quantidade: 2
+    preco_unitario: 11.89
+
+  * sku: "BEBE-001"
+    nome: "Fralda Descartável Pampers Confort Sec Tamanho G 60un"
+    quantidade: 1
+    preco_unitario: 79.90
+
+  * sku: "HORT-018"
+    nome: "Morango Selecionado Bandeja 250g"
+    quantidade: 2
+    preco_unitario: 10.50
+    subtotal: 124.68
+    taxa_entrega: 12.00
+    desconto: 10.00
+    total: 126.68
+    forma_pagamento: "Cartão de Crédito (Visa)"
+
+* pedido_id: "PED-84750"
+  cliente_id: "CLI-1005"
+  cliente_nome: "Juliana Vasconcelos Rios"
+  data_pedido: "2026-10-01T14:10:00"
+  status: "cancelado_estornado"
+  canal: "WhatsApp"
+  itens:
+
+  * sku: "MERC-007"
+    nome: "Azeite de Oliva Extravirgem 500ml Gallo"
+    quantidade: 2
+    preco_unitario: 44.90
+
+  * sku: "CARN-002"
+    nome: "Filé Mignon Bovino Inteiro Peça"
+    quantidade: 2.1
+    preco_unitario: 84.90
+    total: 268.09
+    motivo_cancelamento: "Solicitação do cliente antes da separação devido à mudança de endereço de entrega."
+    estorno_status: "concluido_pix"

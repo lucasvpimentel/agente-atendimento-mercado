@@ -1,0 +1,1494 @@
+produtos:
+  # ==========================================
+  # HORTIFRÚTI (20 ITENS)
+  # ==========================================
+  - sku: "HORT-001"
+    nome: "Banana Prata Climatizada"
+    categoria: "Hortifrúti"
+    preco: 6.99
+    unidade: "kg"
+    estoque: 180
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-002"
+    nome: "Tomate Carmem Selecionado"
+    categoria: "Hortifrúti"
+    preco: 8.49
+    unidade: "kg"
+    estoque: 95
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-003"
+    nome: "Cebola Nacional Pera"
+    categoria: "Hortifrúti"
+    preco: 5.20
+    unidade: "kg"
+    estoque: 210
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-004"
+    nome: "Alface Crespa Hidropônica"
+    categoria: "Hortifrúti"
+    preco: 3.79
+    unidade: "un"
+    estoque: 0
+    secao: "Refrigerados Horti"
+    disponivel: false
+
+  - sku: "HORT-005"
+    nome: "Batata Inglesa Especial"
+    categoria: "Hortifrúti"
+    preco: 7.15
+    unidade: "kg"
+    estoque: 140
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-006"
+    nome: "Cenoura Baby Higienizada 250g"
+    categoria: "Hortifrúti"
+    preco: 6.50
+    unidade: "un"
+    estoque: 45
+    secao: "Refrigerados Horti"
+    disponivel: true
+
+  - sku: "HORT-007"
+    nome: "Maçã Gala Nacional"
+    categoria: "Hortifrúti"
+    preco: 9.90
+    unidade: "kg"
+    estoque: 110
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-008"
+    nome: "Laranja Pera Rio"
+    categoria: "Hortifrúti"
+    preco: 4.99
+    unidade: "kg"
+    estoque: 260
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-009"
+    nome: "Limão Taiti"
+    categoria: "Hortifrúti"
+    preco: 5.89
+    unidade: "kg"
+    estoque: 130
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-010"
+    nome: "Melancia Cortada Embalada"
+    categoria: "Hortifrúti"
+    preco: 4.29
+    unidade: "kg"
+    estoque: 55
+    secao: "Refrigerados Horti"
+    disponivel: true
+
+  - sku: "HORT-011"
+    nome: "Abacaxi Pérola Unidade"
+    categoria: "Hortifrúti"
+    preco: 7.99
+    unidade: "un"
+    estoque: 40
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-012"
+    nome: "Mamão Papaya Seleção"
+    categoria: "Hortifrúti"
+    preco: 8.90
+    unidade: "kg"
+    estoque: 35
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-013"
+    nome: "Manga Palmer Madura"
+    categoria: "Hortifrúti"
+    preco: 7.49
+    unidade: "kg"
+    estoque: 80
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-014"
+    nome: "Alho Roxo Nacional Granel"
+    categoria: "Hortifrúti"
+    preco: 34.90
+    unidade: "kg"
+    estoque: 25
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-015"
+    nome: "Pimentão Verde"
+    categoria: "Hortifrúti"
+    preco: 8.90
+    unidade: "kg"
+    estoque: 45
+    secao: "Banca Central"
+    disponivel: true
+
+  - sku: "HORT-016"
+    nome: "Couve Manteiga Picada 200g"
+    categoria: "Hortifrúti"
+    preco: 4.50
+    unidade: "un"
+    estoque: 28
+    secao: "Refrigerados Horti"
+    disponivel: true
+
+  - sku: "HORT-017"
+    nome: "Rúcula Hidropônica Maço"
+    categoria: "Hortifrúti"
+    preco: 4.20
+    unidade: "un"
+    estoque: 15
+    secao: "Refrigerados Horti"
+    disponivel: true
+
+  - sku: "HORT-018"
+    nome: "Uva Thompson Sem Semente 500g"
+    categoria: "Hortifrúti"
+    preco: 12.99
+    unidade: "un"
+    estoque: 50
+    secao: "Refrigerados Horti"
+    disponivel: true
+
+  - sku: "HORT-019"
+    nome: "Morango Selecionado Bandeja 250g"
+    categoria: "Hortifrúti"
+    preco: 10.50
+    unidade: "un"
+    estoque: 18
+    secao: "Refrigerados Horti"
+    disponivel: true
+
+  - sku: "HORT-020"
+    nome: "Abobrinha Italiana"
+    categoria: "Hortifrúti"
+    preco: 5.90
+    unidade: "kg"
+    estoque: 60
+    secao: "Banca Central"
+    disponivel: true
+
+  # ==========================================
+  # AÇOUGUE & AVES (18 ITENS)
+  # ==========================================
+  - sku: "CARN-001"
+    nome: "Picanha Bovina Resfriada Nacional"
+    categoria: "Açougue & Aves"
+    preco: 69.90
+    unidade: "kg"
+    estoque: 35
+    secao: "Açougue Balcão"
+    disponivel: true
+
+  - sku: "CARN-002"
+    nome: "Filé Mignon Bovino Inteiro Peça"
+    categoria: "Açougue & Aves"
+    preco: 84.90
+    unidade: "kg"
+    estoque: 18
+    secao: "Açougue Balcão"
+    disponivel: true
+
+  - sku: "CARN-003"
+    nome: "Carne Moída Patinho Resfriado"
+    categoria: "Açougue & Aves"
+    preco: 41.50
+    unidade: "kg"
+    estoque: 0
+    secao: "Açougue Balcão"
+    disponivel: false
+
+  - sku: "CARN-004"
+    nome: "Contrafilé Bovino Porcionado"
+    categoria: "Açougue & Aves"
+    preco: 54.90
+    unidade: "kg"
+    estoque: 42
+    secao: "Açougue Balcão"
+    disponivel: true
+
+  - sku: "CARN-005"
+    nome: "Alcatra Bovina com Maminha"
+    categoria: "Açougue & Aves"
+    preco: 46.90
+    unidade: "kg"
+    estoque: 38
+    secao: "Açougue Balcão"
+    disponivel: true
+
+  - sku: "CARN-006"
+    nome: "Fraldinha Bovina Grill"
+    categoria: "Açougue & Aves"
+    preco: 43.90
+    unidade: "kg"
+    estoque: 25
+    secao: "Açougue Balcão"
+    disponivel: true
+
+  - sku: "CARN-007"
+    nome: "Filé de Peito de Frango Resfriado 1kg"
+    categoria: "Açougue & Aves"
+    preco: 21.90
+    unidade: "un"
+    estoque: 85
+    secao: "Aves Balcão"
+    disponivel: true
+
+  - sku: "CARN-008"
+    nome: "Sobrecoxa de Frango Desossada 1kg"
+    categoria: "Açougue & Aves"
+    preco: 23.50
+    unidade: "un"
+    estoque: 40
+    secao: "Aves Balcão"
+    disponivel: true
+
+  - sku: "CARN-009"
+    nome: "Asa de Frango Congelada Pacote 1kg"
+    categoria: "Açougue & Aves"
+    preco: 18.90
+    unidade: "un"
+    estoque: 60
+    secao: "Freezer Aves"
+    disponivel: true
+
+  - sku: "CARN-010"
+    nome: "Costelinha Suína Congelada 1kg"
+    categoria: "Açougue & Aves"
+    preco: 28.90
+    unidade: "un"
+    estoque: 22
+    secao: "Freezer Suínos"
+    disponivel: true
+
+  - sku: "CARN-011"
+    nome: "Lombo Suíno em Bifes 1kg"
+    categoria: "Açougue & Aves"
+    preco: 25.90
+    unidade: "un"
+    estoque: 30
+    secao: "Açougue Balcão"
+    disponivel: true
+
+  - sku: "CARN-012"
+    nome: "Linguiça Toscana Sadia 1kg"
+    categoria: "Açougue & Aves"
+    preco: 24.90
+    unidade: "un"
+    estoque: 75
+    secao: "Balcão Embutidos"
+    disponivel: true
+
+  - sku: "CARN-013"
+    nome: "Linguiça Fininha de Frango Seara 500g"
+    categoria: "Açougue & Aves"
+    preco: 14.50
+    unidade: "un"
+    estoque: 38
+    secao: "Balcão Embutidos"
+    disponivel: true
+
+  - sku: "CARN-014"
+    nome: "Coxão Mole Bovino em Bifes"
+    categoria: "Açougue & Aves"
+    preco: 42.90
+    unidade: "kg"
+    estoque: 30
+    secao: "Açougue Balcão"
+    disponivel: true
+
+  - sku: "CARN-015"
+    nome: "Costela Bovina em Tiras Janela"
+    categoria: "Açougue & Aves"
+    preco: 32.90
+    unidade: "kg"
+    estoque: 45
+    secao: "Açougue Balcão"
+    disponivel: true
+
+  - sku: "CARN-016"
+    nome: "Coração de Frango Congelado 1kg"
+    categoria: "Açougue & Aves"
+    preco: 29.90
+    unidade: "un"
+    estoque: 20
+    secao: "Freezer Aves"
+    disponivel: true
+
+  - sku: "CARN-017"
+    nome: "Hambúrguer de Picanha Artesanal 4x150g"
+    categoria: "Açougue & Aves"
+    preco: 27.90
+    unidade: "un"
+    estoque: 15
+    secao: "Freezer Carnes"
+    disponivel: true
+
+  - sku: "CARN-018"
+    nome: "Bacon Manta Fatiado 500g"
+    categoria: "Açougue & Aves"
+    preco: 26.50
+    unidade: "un"
+    estoque: 34
+    secao: "Balcão Embutidos"
+    disponivel: true
+
+  # ==========================================
+  # PEIXARIA & FRUTOS DO MAR (5 ITENS)
+  # ==========================================
+  - sku: "PEIX-001"
+    nome: "Filé de Tilápia Congelado 800g"
+    categoria: "Peixaria & Frutos do Mar"
+    preco: 36.90
+    unidade: "un"
+    estoque: 48
+    secao: "Freezer Pescados"
+    disponivel: true
+
+  - sku: "PEIX-002"
+    nome: "Salmão Fresco Filé com Pele"
+    categoria: "Peixaria & Frutos do Mar"
+    preco: 98.90
+    unidade: "kg"
+    estoque: 14
+    secao: "Peixaria Balcão"
+    disponivel: true
+
+  - sku: "PEIX-003"
+    nome: "Camarão Cinza Limpo e Cozido 400g"
+    categoria: "Peixaria & Frutos do Mar"
+    preco: 42.90
+    unidade: "un"
+    estoque: 25
+    secao: "Freezer Pescados"
+    disponivel: true
+
+  - sku: "PEIX-004"
+    nome: "Bacalhau Gadus Morhua Desfiado 500g"
+    categoria: "Peixaria & Frutos do Mar"
+    preco: 59.90
+    unidade: "un"
+    estoque: 18
+    secao: "Peixaria Balcão"
+    disponivel: true
+
+  - sku: "PEIX-005"
+    nome: "Filé de Merluza Congelado 800g"
+    categoria: "Peixaria & Frutos do Mar"
+    preco: 28.50
+    unidade: "un"
+    estoque: 32
+    secao: "Freezer Pescados"
+    disponivel: true
+
+  # ==========================================
+  # LATICÍNIOS & FRIOS (16 ITENS)
+  # ==========================================
+  - sku: "LATI-001"
+    nome: "Leite UHT Integral 1L Piracanjuba"
+    categoria: "Laticínios & Frios"
+    preco: 5.49
+    unidade: "un"
+    estoque: 450
+    secao: "Corredor 2"
+    disponivel: true
+
+  - sku: "LATI-002"
+    nome: "Leite UHT Desnatado 1L Italac"
+    categoria: "Laticínios & Frios"
+    preco: 5.29
+    unidade: "un"
+    estoque: 320
+    secao: "Corredor 2"
+    disponivel: true
+
+  - sku: "LATI-003"
+    nome: "Leite UHT Sem Lactose 1L Piracanjuba"
+    categoria: "Laticínios & Frios"
+    preco: 6.89
+    unidade: "un"
+    estoque: 140
+    secao: "Corredor 2"
+    disponivel: true
+
+  - sku: "LATI-004"
+    nome: "Queijo Muçarela Fatiado 200g Tirolez"
+    categoria: "Laticínios & Frios"
+    preco: 11.89
+    unidade: "un"
+    estoque: 64
+    secao: "Geladeira Laticínios"
+    disponivel: true
+
+  - sku: "LATI-005"
+    nome: "Queijo Prato Fatiado 200g Tirolez"
+    categoria: "Laticínios & Frios"
+    preco: 12.49
+    unidade: "un"
+    estoque: 50
+    secao: "Geladeira Laticínios"
+    disponivel: true
+
+  - sku: "LATI-006"
+    nome: "Queijo Parmesão Ralado 50g Faixa Azul"
+    categoria: "Laticínios & Frios"
+    preco: 7.99
+    unidade: "un"
+    estoque: 110
+    secao: "Geladeira Laticínios"
+    disponivel: true
+
+  - sku: "LATI-007"
+    nome: "Queijo Coalho Tradicional 400g"
+    categoria: "Laticínios & Frios"
+    preco: 24.90
+    unidade: "un"
+    estoque: 35
+    secao: "Geladeira Laticínios"
+    disponivel: true
+
+  - sku: "LATI-008"
+    nome: "Requeijão Cremoso Tradicional 200g Nestlé"
+    categoria: "Laticínios & Frios"
+    preco: 9.89
+    unidade: "un"
+    estoque: 85
+    secao: "Geladeira Laticínios"
+    disponivel: true
+
+  - sku: "LATI-009"
+    nome: "Manteiga Extra com Sal 200g Aviação"
+    categoria: "Laticínios & Frios"
+    preco: 13.90
+    unidade: "un"
+    estoque: 0
+    secao: "Geladeira Laticínios"
+    disponivel: false
+
+  - sku: "LATI-010"
+    nome: "Iogurte Natural Integral 170g Danone"
+    categoria: "Laticínios & Frios"
+    preco: 4.19
+    unidade: "un"
+    estoque: 58
+    secao: "Geladeira Laticínios"
+    disponivel: true
+
+  - sku: "LATI-011"
+    nome: "Iogurte Grego Tradicional 400g Batavo"
+    categoria: "Laticínios & Frios"
+    preco: 11.50
+    unidade: "un"
+    estoque: 30
+    secao: "Geladeira Laticínios"
+    disponivel: true
+
+  - sku: "LATI-012"
+    nome: "Creme de Leite UHT 200g Mococa"
+    categoria: "Laticínios & Frios"
+    preco: 3.89
+    unidade: "un"
+    estoque: 280
+    secao: "Corredor 2"
+    disponivel: true
+
+  - sku: "LATI-013"
+    nome: "Leite Condensado Semidesnatado 395g Leça de Moça"
+    categoria: "Laticínios & Frios"
+    preco: 7.49
+    unidade: "un"
+    estoque: 210
+    secao: "Corredor 2"
+    disponivel: true
+
+  - sku: "LATI-014"
+    nome: "Presunto Cozido sem Capa Fatiado 200g Sadia"
+    categoria: "Laticínios & Frios"
+    preco: 8.49
+    unidade: "un"
+    estoque: 70
+    secao: "Geladeira Frios"
+    disponivel: true
+
+  - sku: "LATI-015"
+    nome: "Peito de Peru Defumado Fatiado 200g Sadia"
+    categoria: "Laticínios & Frios"
+    preco: 13.90
+    unidade: "un"
+    estoque: 40
+    secao: "Geladeira Frios"
+    disponivel: true
+
+  - sku: "LATI-016"
+    nome: "Salame Italiano Fatiado 100g Seara"
+    categoria: "Laticínios & Frios"
+    preco: 10.90
+    unidade: "un"
+    estoque: 55
+    secao: "Geladeira Frios"
+    disponivel: true
+
+  # ==========================================
+  # MERCEARIA & DESPENSA (28 ITENS)
+  # ==========================================
+  - sku: "MERC-001"
+    nome: "Arroz Branco Tipo 1 5kg Camil"
+    categoria: "Mercearia & Despensa"
+    preco: 31.90
+    unidade: "un"
+    estoque: 120
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-002"
+    nome: "Arroz Parboilizado 5kg Tio João"
+    categoria: "Mercearia & Despensa"
+    preco: 33.50
+    unidade: "un"
+    estoque: 95
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-003"
+    nome: "Arroz Integral 1kg Camil"
+    categoria: "Mercearia & Despensa"
+    preco: 8.49
+    unidade: "un"
+    estoque: 60
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-004"
+    nome: "Feijão Carioca Tipo 1 1kg Kicaldo"
+    categoria: "Mercearia & Despensa"
+    preco: 8.79
+    unidade: "un"
+    estoque: 140
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-005"
+    nome: "Feijão Preto Tipo 1 1kg Camil"
+    categoria: "Mercearia & Despensa"
+    preco: 9.20
+    unidade: "un"
+    estoque: 85
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-006"
+    nome: "Óleo de Soja Refinado 900ml Soya"
+    categoria: "Mercearia & Despensa"
+    preco: 6.89
+    unidade: "un"
+    estoque: 260
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-007"
+    nome: "Azeite de Oliva Extravirgem 500ml Gallo"
+    categoria: "Mercearia & Despensa"
+    preco: 44.90
+    unidade: "un"
+    estoque: 45
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-008"
+    nome: "Açúcar Refinado 1kg União"
+    categoria: "Mercearia & Despensa"
+    preco: 4.89
+    unidade: "un"
+    estoque: 220
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-009"
+    nome: "Açúcar Cristal 5kg Cristal"
+    categoria: "Mercearia & Despensa"
+    preco: 19.90
+    unidade: "un"
+    estoque: 70
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-010"
+    nome: "Sal Refinado 1kg Cisne"
+    categoria: "Mercearia & Despensa"
+    preco: 2.99
+    unidade: "un"
+    estoque: 310
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-011"
+    nome: "Café Torrado e Moído Tradicional 500g Pilão"
+    categoria: "Mercearia & Despensa"
+    preco: 19.80
+    unidade: "un"
+    estoque: 88
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-012"
+    nome: "Café em Cápsulas Espresso Nespresso Compatível 10un"
+    categoria: "Mercearia & Despensa"
+    preco: 22.90
+    unidade: "un"
+    estoque: 40
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-013"
+    nome: "Farinha de Trigo Tradicional 1kg Dona Benta"
+    categoria: "Mercearia & Despensa"
+    preco: 5.69
+    unidade: "un"
+    estoque: 160
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-014"
+    nome: "Macarrão Espaguete nº 8 500g Barilla"
+    categoria: "Mercearia & Despensa"
+    preco: 5.99
+    unidade: "un"
+    estoque: 175
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-015"
+    nome: "Macarrão Penne Rigate 500g Barilla"
+    categoria: "Mercearia & Despensa"
+    preco: 6.29
+    unidade: "un"
+    estoque: 120
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-016"
+    nome: "Molho de Tomate Tradicional Sachê 300g Pomarola"
+    categoria: "Mercearia & Despensa"
+    preco: 2.89
+    unidade: "un"
+    estoque: 250
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-017"
+    nome: "Extrato de Tomate 340g Elefante"
+    categoria: "Mercearia & Despensa"
+    preco: 5.49
+    unidade: "un"
+    estoque: 90
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-018"
+    nome: "Atum Sólido em Óleo Lata 170g Gomes da Costa"
+    categoria: "Mercearia & Despensa"
+    preco: 11.90
+    unidade: "un"
+    estoque: 65
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-019"
+    nome: "Sardinha em Conserva Óleo 125g Coqueiro"
+    categoria: "Mercearia & Despensa"
+    preco: 5.29
+    unidade: "un"
+    estoque: 110
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-020"
+    nome: "Milho Verde Lata 170g Quero"
+    categoria: "Mercearia & Despensa"
+    preco: 3.49
+    unidade: "un"
+    estoque: 180
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-021"
+    nome: "Ervilha em Conserva Lata 170g Quero"
+    categoria: "Mercearia & Despensa"
+    preco: 3.49
+    unidade: "un"
+    estoque: 140
+    secao: "Corredor 4"
+    disponivel: true
+
+  - sku: "MERC-022"
+    nome: "Maionese Tradicional Pote 500g Hellmanns"
+    categoria: "Mercearia & Despensa"
+    preco: 9.90
+    unidade: "un"
+    estoque: 95
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-023"
+    nome: "Ketchup Tradicional 397g Heinz"
+    categoria: "Mercearia & Despensa"
+    preco: 12.80
+    unidade: "un"
+    estoque: 80
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-024"
+    nome: "Mostarda Amarela 255g Heinz"
+    categoria: "Mercearia & Despensa"
+    preco: 9.90
+    unidade: "un"
+    estoque: 60
+    secao: "Corredor 3"
+    disponivel: true
+
+  - sku: "MERC-025"
+    nome: "Biscoito Cream Cracker 400g Fortaleza"
+    categoria: "Mercearia & Despensa"
+    preco: 5.79
+    unidade: "un"
+    estoque: 130
+    secao: "Corredor 5"
+    disponivel: true
+
+  - sku: "MERC-026"
+    nome: "Biscoito Recheado Chocolate 136g Oreo"
+    categoria: "Mercearia & Despensa"
+    preco: 4.49
+    unidade: "un"
+    estoque: 170
+    secao: "Corredor 5"
+    disponivel: true
+
+  - sku: "MERC-027"
+    nome: "Chocolate Barra ao Leite 90g Nestlé"
+    categoria: "Mercearia & Despensa"
+    preco: 6.99
+    unidade: "un"
+    estoque: 110
+    secao: "Corredor 5"
+    disponivel: true
+
+  - sku: "MERC-028"
+    nome: "Cereal Matinal Sucrilhos 240g Kellogg's"
+    categoria: "Mercearia & Despensa"
+    preco: 11.90
+    unidade: "un"
+    estoque: 45
+    secao: "Corredor 4"
+    disponivel: true
+
+  # ==========================================
+  # PADARIA & SOBREMESAS (8 ITENS)
+  # ==========================================
+  - sku: "PADA-001"
+    nome: "Pão Francês Tradicional"
+    categoria: "Padaria & Sobremesas"
+    preco: 16.90
+    unidade: "kg"
+    estoque: 50
+    secao: "Padaria Balcão"
+    disponivel: true
+
+  - sku: "PADA-002"
+    nome: "Pão de Forma Tradicional 450g Bauducco"
+    categoria: "Padaria & Sobremesas"
+    preco: 8.29
+    unidade: "un"
+    estoque: 45
+    secao: "Gôndola de Pães"
+    disponivel: true
+
+  - sku: "PADA-003"
+    nome: "Pão de Forma Integral 12 Grãos 450g Wickbold"
+    categoria: "Padaria & Sobremesas"
+    preco: 11.90
+    unidade: "un"
+    estoque: 30
+    secao: "Gôndola de Pães"
+    disponivel: true
+
+  - sku: "PADA-004"
+    nome: "Pão de Queijo Tradicional Fornelli Assado 100g"
+    categoria: "Padaria & Sobremesas"
+    preco: 5.50
+    unidade: "un"
+    estoque: 35
+    secao: "Padaria Balcão"
+    disponivel: true
+
+  - sku: "PADA-005"
+    nome: "Bolo Caseiro de Cenoura com Cobertura Chocolate 400g"
+    categoria: "Padaria & Sobremesas"
+    preco: 16.90
+    unidade: "un"
+    estoque: 12
+    secao: "Padaria Balcão"
+    disponivel: true
+
+  - sku: "PADA-006"
+    nome: "Croissant de Manteiga Fornada da Tarde"
+    categoria: "Padaria & Sobremesas"
+    preco: 6.90
+    unidade: "un"
+    estoque: 20
+    secao: "Padaria Balcão"
+    disponivel: true
+
+  - sku: "PADA-007"
+    nome: "Torrada Tradicional 142g Bauducco"
+    categoria: "Padaria & Sobremesas"
+    preco: 5.29
+    unidade: "un"
+    estoque: 65
+    secao: "Gôndola de Pães"
+    disponivel: true
+
+  - sku: "PADA-008"
+    nome: "Sonho Recheado com Creme de Baunilha"
+    categoria: "Padaria & Sobremesas"
+    preco: 4.50
+    unidade: "un"
+    estoque: 18
+    secao: "Padaria Balcão"
+    disponivel: true
+
+  # ==========================================
+  # BEBIDAS (17 ITENS)
+  # ==========================================
+  - sku: "BEBI-001"
+    nome: "Refrigerante Coca-Cola Original 2L"
+    categoria: "Bebidas"
+    preco: 10.99
+    unidade: "un"
+    estoque: 195
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-002"
+    nome: "Refrigerante Coca-Cola Sem Açúcar 2L"
+    categoria: "Bebidas"
+    preco: 10.99
+    unidade: "un"
+    estoque: 150
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-003"
+    nome: "Refrigerante Guaraná Antarctica 2L"
+    categoria: "Bebidas"
+    preco: 8.99
+    unidade: "un"
+    estoque: 160
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-004"
+    nome: "Cerveja Heineken Puro Malte Long Neck 330ml"
+    categoria: "Bebidas"
+    preco: 6.89
+    unidade: "un"
+    estoque: 310
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-005"
+    nome: "Cerveja Stella Artois Puro Malte Long Neck 330ml"
+    categoria: "Bebidas"
+    preco: 6.49
+    unidade: "un"
+    estoque: 220
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-006"
+    nome: "Cerveja Brahma Chopp Lata 350ml"
+    categoria: "Bebidas"
+    preco: 3.79
+    unidade: "un"
+    estoque: 480
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-007"
+    nome: "Água Mineral Sem Gás 1,5L Indaiá"
+    categoria: "Bebidas"
+    preco: 2.79
+    unidade: "un"
+    estoque: 400
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-008"
+    nome: "Água Mineral Com Gás 500ml Crystal"
+    categoria: "Bebidas"
+    preco: 2.19
+    unidade: "un"
+    estoque: 280
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-009"
+    nome: "Suco Integral de Uva 1,5L Aurora"
+    categoria: "Bebidas"
+    preco: 17.90
+    unidade: "un"
+    estoque: 75
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-010"
+    nome: "Suco Néctar de Laranja 1L Del Valle"
+    categoria: "Bebidas"
+    preco: 7.99
+    unidade: "un"
+    estoque: 90
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-011"
+    nome: "Vinho Tinto Chileno Cabernet Sauvignon 750ml Casillero del Diablo"
+    categoria: "Bebidas"
+    preco: 49.90
+    unidade: "un"
+    estoque: 45
+    secao: "Adega"
+    disponivel: true
+
+  - sku: "BEBI-012"
+    nome: "Vinho Tinto Argentino Malbec 750ml Catena Zapata"
+    categoria: "Bebidas"
+    preco: 159.00
+    unidade: "un"
+    estoque: 10
+    secao: "Adega"
+    disponivel: true
+
+  - sku: "BEBI-013"
+    nome: "Espumante Brut 750ml Chandon"
+    categoria: "Bebidas"
+    preco: 89.90
+    unidade: "un"
+    estoque: 24
+    secao: "Adega"
+    disponivel: true
+
+  - sku: "BEBI-014"
+    nome: "Whisky Red Label 1L Johnnie Walker"
+    categoria: "Bebidas"
+    preco: 99.90
+    unidade: "un"
+    estoque: 30
+    secao: "Adega"
+    disponivel: true
+
+  - sku: "BEBI-015"
+    nome: "Vodka Smirnoff 998ml"
+    categoria: "Bebidas"
+    preco: 42.90
+    unidade: "un"
+    estoque: 40
+    secao: "Adega"
+    disponivel: true
+
+  - sku: "BEBI-016"
+    nome: "Energético Red Bull Energy Drink 250ml"
+    categoria: "Bebidas"
+    preco: 9.49
+    unidade: "un"
+    estoque: 140
+    secao: "Corredor 6"
+    disponivel: true
+
+  - sku: "BEBI-017"
+    nome: "Chá Gelado Pêssego 1,5L Fuze Tea"
+    categoria: "Bebidas"
+    preco: 7.29
+    unidade: "un"
+    estoque: 80
+    secao: "Corredor 6"
+    disponivel: true
+
+  # ==========================================
+  # LIMPEZA & LAVANDERIA (14 ITENS)
+  # ==========================================
+  - sku: "LIMP-001"
+    nome: "Sabão em Pó Omo Lavagem Perfeita 1,6kg"
+    categoria: "Limpeza & Lavanderia"
+    preco: 24.90
+    unidade: "un"
+    estoque: 72
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-002"
+    nome: "Sabão Líquido Ariel Concentrado 2L"
+    categoria: "Limpeza & Lavanderia"
+    preco: 38.90
+    unidade: "un"
+    estoque: 55
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-003"
+    nome: "Amaciante Concentrado Downy Brisa de Verão 1L"
+    categoria: "Limpeza & Lavanderia"
+    preco: 19.90
+    unidade: "un"
+    estoque: 65
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-004"
+    nome: "Detergente Líquido Neutro 500ml Ypê"
+    categoria: "Limpeza & Lavanderia"
+    preco: 2.49
+    unidade: "un"
+    estoque: 320
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-005"
+    nome: "Detergente Líquido Maçã 500ml Limpol"
+    categoria: "Limpeza & Lavanderia"
+    preco: 2.39
+    unidade: "un"
+    estoque: 190
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-006"
+    nome: "Água Sanitária 2L Qboa"
+    categoria: "Limpeza & Lavanderia"
+    preco: 6.20
+    unidade: "un"
+    estoque: 0
+    secao: "Corredor 7"
+    disponivel: false
+
+  - sku: "LIMP-007"
+    nome: "Desinfetante Lavanda 2L Pinho Sol"
+    categoria: "Limpeza & Lavanderia"
+    preco: 12.90
+    unidade: "un"
+    estoque: 85
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-008"
+    nome: "Limpador Multiuso Tradicional 500ml Veja"
+    categoria: "Limpeza & Lavanderia"
+    preco: 5.49
+    unidade: "un"
+    estoque: 160
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-009"
+    nome: "Esponja Dupla Face Pacote com 3un Scotch-Brite"
+    categoria: "Limpeza & Lavanderia"
+    preco: 7.20
+    unidade: "un"
+    estoque: 110
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-010"
+    nome: "Saco para Lixo Reforçado 50L Rolo 30un Embalixo"
+    categoria: "Limpeza & Lavanderia"
+    preco: 16.90
+    unidade: "un"
+    estoque: 70
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-011"
+    nome: "Lava-Louças Pastilhas Finish All in One 30un"
+    categoria: "Limpeza & Lavanderia"
+    preco: 46.90
+    unidade: "un"
+    estoque: 22
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-012"
+    nome: "Álcool Líquido 70% 1L Da Ilha"
+    categoria: "Limpeza & Lavanderia"
+    preco: 6.50
+    unidade: "un"
+    estoque: 95
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-013"
+    nome: "Lustra Móveis Lavanda 200ml Poliflor"
+    categoria: "Limpeza & Lavanderia"
+    preco: 8.90
+    unidade: "un"
+    estoque: 40
+    secao: "Corredor 7"
+    disponivel: true
+
+  - sku: "LIMP-014"
+    nome: "Inseticida Aerossol Multi-insetos 300ml SBP"
+    categoria: "Limpeza & Lavanderia"
+    preco: 15.90
+    unidade: "un"
+    estoque: 58
+    secao: "Corredor 7"
+    disponivel: true
+
+  # ==========================================
+  # HIGIENE PESSOAL & PERFUMARIA (14 ITENS)
+  # ==========================================
+  - sku: "HIGI-001"
+    nome: "Papel Higiênico Folha Dupla 30m Neve Pacote 12 Rolos"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 26.90
+    unidade: "un"
+    estoque: 85
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-002"
+    nome: "Creme Dental Tripla Ação 90g Colgate"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 4.29
+    unidade: "un"
+    estoque: 210
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-003"
+    nome: "Escova Dental Macia Oral-B Leve 2 Pague 1"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 16.90
+    unidade: "un"
+    estoque: 65
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-004"
+    nome: "Enxaguante Bucal Cool Mint 500ml Listerine"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 23.90
+    unidade: "un"
+    estoque: 45
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-005"
+    nome: "Sabonete em Barra Hidratante 85g Dove"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 4.59
+    unidade: "un"
+    estoque: 290
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-006"
+    nome: "Sabonete Líquido Erva Doce Refil 200ml Palmolive"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 7.80
+    unidade: "un"
+    estoque: 70
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-007"
+    nome: "Shampoo Óleo Extraordinário 400ml Elseve"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 22.90
+    unidade: "un"
+    estoque: 50
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-008"
+    nome: "Condicionador Óleo Extraordinário 400ml Elseve"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 24.90
+    unidade: "un"
+    estoque: 45
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-009"
+    nome: "Desodorante Aerossol Antibacterial 150ml Rexona"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 14.90
+    unidade: "un"
+    estoque: 130
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-010"
+    nome: "Protetor Solar FPS 50 200ml Nivea Sun"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 49.90
+    unidade: "un"
+    estoque: 30
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-011"
+    nome: "Fio Dental Menta 50m Johnson & Johnson"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 9.90
+    unidade: "un"
+    estoque: 80
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-012"
+    nome: "Absorvente com Abas Noturno 16un Sempre Livre"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 12.90
+    unidade: "un"
+    estoque: 60
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-013"
+    nome: "Carga para Aparelho de Barbear Mach3 4un Gillette"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 42.90
+    unidade: "un"
+    estoque: 28
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "HIGI-014"
+    nome: "Algodão em Discos 50un Bellacotton"
+    categoria: "Higiene Pessoal & Perfumaria"
+    preco: 8.40
+    unidade: "un"
+    estoque: 75
+    secao: "Corredor 8"
+    disponivel: true
+
+  # ==========================================
+  # CONGELADOS & PRONTOS (8 ITENS)
+  # ==========================================
+  - sku: "CONG-001"
+    nome: "Pizza Congelada de Calabresa 460g Sadia"
+    categoria: "Congelados & Prontos"
+    preco: 18.90
+    unidade: "un"
+    estoque: 45
+    secao: "Freezer Congelados"
+    disponivel: true
+
+  - sku: "CONG-002"
+    nome: "Pizza Congelada Quatro Queijos 440g Seara"
+    categoria: "Congelados & Prontos"
+    preco: 19.50
+    unidade: "un"
+    estoque: 40
+    secao: "Freezer Congelados"
+    disponivel: true
+
+  - sku: "CONG-003"
+    nome: "Lasanha Congelada à Bolonhesa 600g Sadia"
+    categoria: "Congelados & Prontos"
+    preco: 16.90
+    unidade: "un"
+    estoque: 60
+    secao: "Freezer Congelados"
+    disponivel: true
+
+  - sku: "CONG-004"
+    nome: "Batata Congelada Palito Pré-Frita 1,05kg McCain"
+    categoria: "Congelados & Prontos"
+    preco: 21.90
+    unidade: "un"
+    estoque: 50
+    secao: "Freezer Congelados"
+    disponivel: true
+
+  - sku: "CONG-005"
+    nome: "Nuggets Tradicional de Frango 300g Sadia"
+    categoria: "Congelados & Prontos"
+    preco: 10.90
+    unidade: "un"
+    estoque: 70
+    secao: "Freezer Congelados"
+    disponivel: true
+
+  - sku: "CONG-006"
+    nome: "Pão de Queijo Tradicional Congelado 1kg Forno de Minas"
+    categoria: "Congelados & Prontos"
+    preco: 28.90
+    unidade: "un"
+    estoque: 35
+    secao: "Freezer Congelados"
+    disponivel: true
+
+  - sku: "CONG-007"
+    nome: "Açaí Tradicional Pote 1L Frooty"
+    categoria: "Congelados & Prontos"
+    preco: 26.90
+    unidade: "un"
+    estoque: 28
+    secao: "Freezer Sorvetes"
+    disponivel: true
+
+  - sku: "CONG-008"
+    nome: "Sorvete Pote Creme 1,5L Kibon"
+    categoria: "Congelados & Prontos"
+    preco: 29.90
+    unidade: "un"
+    estoque: 32
+    secao: "Freezer Sorvetes"
+    disponivel: true
+
+  # ==========================================
+  # PET SHOP (8 ITENS)
+  # ==========================================
+  - sku: "PETS-001"
+    nome: "Ração Seca Cães Adultos Carne e Vegetais 3kg Pedigree"
+    categoria: "Pet Shop"
+    preco: 46.90
+    unidade: "un"
+    estoque: 25
+    secao: "Corredor 9"
+    disponivel: true
+
+  - sku: "PETS-002"
+    nome: "Ração Seca Cães Filhotes Frango e Arroz 3kg Golden"
+    categoria: "Pet Shop"
+    preco: 59.90
+    unidade: "un"
+    estoque: 18
+    secao: "Corredor 9"
+    disponivel: true
+
+  - sku: "PETS-003"
+    nome: "Ração Seca Gatos Adultos Salmão 3kg Whiskas"
+    categoria: "Pet Shop"
+    preco: 49.90
+    unidade: "un"
+    estoque: 22
+    secao: "Corredor 9"
+    disponivel: true
+
+  - sku: "PETS-004"
+    nome: "Sachê Cão Adulto Carne ao Molho 100g Pedigree"
+    categoria: "Pet Shop"
+    preco: 3.29
+    unidade: "un"
+    estoque: 120
+    secao: "Corredor 9"
+    disponivel: true
+
+  - sku: "PETS-005"
+    nome: "Sachê Gato Salmão ao Molho 85g Whiskas"
+    categoria: "Pet Shop"
+    preco: 3.29
+    unidade: "un"
+    estoque: 115
+    secao: "Corredor 9"
+    disponivel: true
+
+  - sku: "PETS-006"
+    nome: "Areia Sanitária para Gatos Fina 4kg Pipicat"
+    categoria: "Pet Shop"
+    preco: 15.90
+    unidade: "un"
+    estoque: 40
+    secao: "Corredor 9"
+    disponivel: true
+
+  - sku: "PETS-007"
+    nome: "Tapete Higiênico para Cães 30un Chalesco"
+    categoria: "Pet Shop"
+    preco: 68.90
+    unidade: "un"
+    estoque: 15
+    secao: "Corredor 9"
+    disponivel: true
+
+  - sku: "PETS-008"
+    nome: "Petisco Bifinho para Cães Carne 500g Keldog"
+    categoria: "Pet Shop"
+    preco: 19.90
+    unidade: "un"
+    estoque: 30
+    secao: "Corredor 9"
+    disponivel: true
+
+  # ==========================================
+  # BEBÊ & CUIDADOS INFANTIS (6 ITENS)
+  # ==========================================
+  - sku: "BEBE-001"
+    nome: "Fralda Descartável Pampers Confort Sec Tamanho G 60un"
+    categoria: "Bebê & Cuidados Infantis"
+    preco: 79.90
+    unidade: "un"
+    estoque: 35
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "BEBE-002"
+    nome: "Fralda Descartável Huggies Supreme Care Tamanho M 68un"
+    categoria: "Bebê & Cuidados Infantis"
+    preco: 76.50
+    unidade: "un"
+    estoque: 30
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "BEBE-003"
+    nome: "Toalhinhas Umedecidas Recém-Nascido 48un Pampers"
+    categoria: "Bebê & Cuidados Infantis"
+    preco: 11.90
+    unidade: "un"
+    estoque: 95
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "BEBE-004"
+    nome: "Pomada Contra Assaduras Bepantol Baby 60g"
+    categoria: "Bebê & Cuidados Infantis"
+    preco: 27.90
+    unidade: "un"
+    estoque: 40
+    secao: "Corredor 8"
+    disponivel: true
+
+  - sku: "BEBE-005"
+    nome: "Fórmula Infantil Nan Comfor 1 800g Nestlé"
+    categoria: "Bebê & Cuidados Infantis"
+    preco: 62.90
+    unidade: "un"
+    estoque: 20
+    secao: "Corredor 2"
+    disponivel: true
+
+  - sku: "BEBE-006"
+    nome: "Shampoo Infantil Tradicional 200ml Johnson's Baby"
+    categoria: "Bebê & Cuidados Infantis"
+    preco: 16.90
+    unidade: "un"
+    estoque: 45
+    secao: "Corredor 8"
+    disponivel: true

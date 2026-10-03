@@ -1,0 +1,68 @@
+# Manual de Políticas Operacionais e Atendimento ao Cliente
+**Supermercado Bom Preço & Cia**  
+*Versão: 3.2 | Vigência: Outubro/2026*
+
+---
+
+## 1. Diretrizes de Entregas e Logística Urbana
+
+### 1.1 Modalidades de Envio
+O Supermercado Bom Preço & Cia disponibiliza duas modalidades de entrega para compras realizadas pelo aplicativo e site:
+* **Entrega Expressa:** Realizada em até 120 minutos (2 horas) a partir da aprovação do pagamento. Válida exclusivamente para pedidos concluídos entre 07h00 e 18h00 com distância máxima de 10 km de uma unidade física. Taxa fixa de R$ 14,90.
+* **Entrega Agendada:** O cliente seleciona faixas de horário de 3 horas (08h–11h, 11h–14h, 14h–17h ou 17h–20h). Custo de R$ 8,90 para compras de até R$ 249,99; frete grátis em pedidos a partir de R$ 250,00 (ou a partir de R$ 120,00 para clientes da categoria **Clube Ouro**).
+
+### 1.2 Manutenção da Cadeia Fria e Padrões Sanitários
+Para garantir a conservação e integridade dos alimentos perecíveis durante o deslocamento:
+* Laticínios e Embutidos Resfriados: acondicionados entre $1^\circ\text{C}$ e $7^\circ\text{C}$.
+* Carnes Bovinas, Suínas e Aves: acondicionadas entre $0^\circ\text{C}$ e $4^\circ\text{C}$.
+* Congelados em Geral: transportados em caixas isotérmicas vedadas a temperaturas inferiores a $-12^\circ\text{C}$.
+
+Se no momento da entrega o cliente constatar desgelo evidente (ex.: sorvete derretido, carne com embalagem estufada ou perda de vácuo), deve recusar o item imediatamente no ato do recebimento ou registrar foto e acionar o SAC em até 2 horas.
+
+---
+
+## 2. Política de Trocas, Avarias e Devoluções
+
+### 2.1 Prazos de Solicitação
+* **Perecíveis (Hortifrúti, Carnes, Padaria Fresca e Laticínios):** Notificação em até **24 horas** corridas após a entrega ou retirada em loja. Obrigatório envio de foto nítida e lote do produto.
+* **Mercadorias Secas e Produtos de Limpeza/Higiene:** Notificação em até **7 dias corridos**, desde que preservada a embalagem primária e os lacres intactos.
+* **Vício de Qualidade Oculto:** Produtos com alteração organoléptica comprovada antes do término do prazo de validade (ex.: produto mofado dentro do prazo) possuem garantia legal de até 30 dias corridos.
+
+### 2.2 Itens Não Aceitos para Desistência Simples
+Por restrições sanitárias da Vigilância Sanitária (ANVISA), não são aceitas devoluções por mero arrependimento ou desistência:
+1. Carnes e frios cortados, moídos ou manipulados a granel sob demanda do cliente.
+2. Alimentos congelados ou refrigerados após 2 horas da saída do estabelecimento (risco irreversível de quebra de temperatura).
+3. Pães frescos, bolos recheados e produtos artesanais de confeitaria.
+
+---
+
+## 3. Fluxo de Reembolsos, Estornos e Cupons
+
+### 3.1 Cancelamento Antes do Envio
+* **Pagamento via PIX:** Devolução processada na mesma chave bancária em até **60 minutos**.
+* **Cartão de Crédito:** Solicitação de estorno enviada à operadora em até **2 horas úteis** (o lançamento no extrato depende do fechamento da fatura).
+
+### 3.2 Ocorrência em Pedidos Faturados (Item Faltante ou Avariado)
+Constatada a falta de item ou entrega avariada, o cliente pode optar por:
+1. **Crédito Imediato em Carteira Digital:** Saldo liberado no aplicativo em até 15 minutos para uso em qualquer compra futura, sem prazo de validade.
+2. **Estorno Bancário / PIX:** Concluído pelo departamento financeiro em até **48 horas úteis**.
+
+---
+
+## 4. Matriz de Triagem e Transbordo Humano
+
+O agente inteligente resolve de forma autônoma perguntas sobre catálogo, estoque, endereço, horários e políticas gerais. O agente **deve interromper o atendimento automático e transferir para a equipe humana** nas seguintes condições:
+
+| Situação Identificada | Severidade | Fila de Atendimento | Gatilhos Textuais |
+| :--- | :--- | :--- | :--- |
+| **Suspeita de Intoxicação Alimentar** | Crítica | `sac_emergencial` | Vômito, diarreia, carne estragada após ingestão, consulta médica. |
+| **Cobrança Duplicada / Erro de Cartão** | Alta | `financeiro_cobranca` | Cobrança dobrada, valor divergente da nota, erro no gateway. |
+| **Atraso Crítico de Entrega Expressa** | Média/Alta | `sac_logistica` | Pedido em rota com mais de 30 minutos além da janela prevista. |
+| **Agressividade / Insatisfação Grave** | Média | `sac_relacionamento` | Três repetições consecutivas sem compreensão, menção a Procon ou processo. |
+| **Mercadoria em Falta sem Autorização** | Média | `sac_operacoes` | Pedido recebido sem os itens principais e sem consentimento para troca. |
+
+### 4.1 Procedimento de Transferência
+Quando o transbordo for ativado, o agente deve:
+1. Confirmar o CPF do cliente e o número do pedido vinculado.
+2. Exibir mensagem cordial de transferência com contexto resumido.
+3. Classificar o ticket com as devidas tags de encaminhamento (ex.: `[urgente, logistica, atraso]`).

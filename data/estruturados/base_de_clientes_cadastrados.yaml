@@ -1,0 +1,72 @@
+clientes:
+  - cliente_id: "CLI-1001"
+    nome: "Mariana Souza Ribeiro"
+    cpf: "123.***.***-01"
+    telefone: "(85) 99123-4567"
+    email: "mariana.ribeiro@email.com"
+    endereco: "Rua Silva Jatahy, 450, Ap 802 - Meireles, Fortaleza - CE"
+    programa_fidelidade: "Clube Ouro"
+    pontos_acumulados: 1420
+
+  - cliente_id: "CLI-1002"
+    nome: "Carlos Eduardo Barreto"
+    cpf: "234.***.***-12"
+    telefone: "(85) 98877-1122"
+    email: "carlos.barreto@email.com"
+    endereco: "Av. Beira Mar, 2100, Ap 1201 - Meireles, Fortaleza - CE"
+    programa_fidelidade: "Clube Prata"
+    pontos_acumulados: 580
+
+  - cliente_id: "CLI-1003"
+    nome: "Fernanda Albuquerque Lima"
+    cpf: "345.***.***-23"
+    telefone: "(85) 98765-4321"
+    email: "nanda.lima@email.com"
+    endereco: "Rua Canuto de Aguiar, 890 - Varjota, Fortaleza - CE"
+    programa_fidelidade: "Clube Ouro"
+    pontos_acumulados: 2150
+
+  - cliente_id: "CLI-1004"
+    nome: "Rodrigo Mendes Castro"
+    cpf: "456.***.***-34"
+    telefone: "(85) 99654-3210"
+    email: "rodrigo.mcastro@email.com"
+    endereco: "Rua Ana Bilhar, 1205, Ap 304 - Aldeota, Fortaleza - CE"
+    programa_fidelidade: "Clube Bronze"
+    pontos_acumulados: 140
+
+  - cliente_id: "CLI-1005"
+    nome: "Juliana Vasconcelos Rios"
+    cpf: "567.***.***-45"
+    telefone: "(85) 99432-8877"
+    email: "ju.vasconcelos@email.com"
+    endereco: "Av. Santos Dumont, 3300, Torre B, Ap 502 - Aldeota, Fortaleza - CE"
+    programa_fidelidade: "Clube Ouro"
+    pontos_acumulados: 3410
+
+  - cliente_id: "CLI-1006"
+    nome: "Marcelo Tavares Fontes"
+    cpf: "678.***.***-56"
+    telefone: "(85) 98112-9900"
+    email: "mtavares@email.com"
+    endereco: "Rua Coronel Jucá, 720 - Dionísio Torres, Fortaleza - CE"
+    programa_fidelidade: "Clube Prata"
+    pontos_acumulados: 720
+
+  - cliente_id: "CLI-1007"
+    nome: "Beatriz Holanda Cavalcante"
+    cpf: "789.***.***-67"
+    telefone: "(85) 99234-5566"
+    email: "bia.cavalcante@email.com"
+    endereco: "Rua Tibúrcio Cavalcante, 1450, Ap 1002 - Meireles, Fortaleza - CE"
+    programa_fidelidade: "Clube Bronze"
+    pontos_acumulados: 90
+
+  - cliente_id: "CLI-1008"
+    nome: "Felipe Aragão Nogueira"
+    cpf: "890.***.***-78"
+    telefone: "(85) 98888-2233"
+    email: "felipe.anogueira@email.com"
+    endereco: "Rua Maria Tomásia, 630 - Aldeota, Fortaleza - CE"
+    programa_fidelidade: "Clube Ouro"
+    pontos_acumulados: 1890
