@@ -1,5 +1,5 @@
 import html
-import os
+import logging
 import uuid
 
 import streamlit as st
@@ -7,7 +7,7 @@ import streamlit as st
 from src import agent
 from src.config import ROOT
 from src.ui import (dados_cliente, destacar_protocolos, html_chips, html_cupom, listar_clientes,
-                    mensagem_de_erro, primeiro_nome, sugestoes)
+                    mensagem_de_erro, primeiro_nome, sugestoes, verificar_ambiente)
 
 st.set_page_config(page_title="Atendimento Bom Preço", page_icon="🛒")
 st.markdown(f"<style>{(ROOT / 'assets' / 'estilo.css').read_text(encoding='utf-8')}</style>",
@@ -15,8 +15,9 @@ st.markdown(f"<style>{(ROOT / 'assets' / 'estilo.css').read_text(encoding='utf-8
 st.markdown('<div class="marca"><span class="etiqueta">Bom Preço</span>'
             '<span class="marca-sub">Atendimento</span></div>', unsafe_allow_html=True)
 
-if not os.getenv("OPENAI_API_KEY"):
-    st.error("Defina OPENAI_API_KEY no arquivo .env para usar o assistente.")
+if problemas := verificar_ambiente():
+    for problema in problemas:
+        st.error(problema)
     st.stop()
 
 
@@ -52,7 +53,8 @@ if pergunta:
         with st.spinner("Consultando a loja..."):
             resp = agent.conversar(st.session_state.agente, pergunta, st.session_state.thread_id)
         mensagens.append({"role": "assistant", "texto": resp["texto"], "ferramentas": resp["ferramentas"]})
-    except Exception as erro:  # a UI nunca mostra traceback ao cliente
+    except Exception as erro:  # a UI nunca mostra traceback ao cliente; a causa vai para o log
+        logging.getLogger("atendimento").exception("Falha ao responder")
         st.error(mensagem_de_erro(erro))
 
 if not mensagens:

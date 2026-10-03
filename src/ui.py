@@ -1,6 +1,9 @@
 import html
+import os
 import re
+from importlib.util import find_spec
 
+from src.config import INDEX_DIR
 from src.db import get_conn
 
 _PROTOCOLO = re.compile(r"TCK-\d{4}-\d{3}")
@@ -75,3 +78,15 @@ def sugestoes(identificado: bool) -> list[str]:
     if identificado:
         return ["Onde está meu pedido?", *comuns, "Tive um problema com meu pedido"]
     return [*comuns, "Quais são as promoções de hoje?", "Qual o horário de atendimento do SAC?"]
+
+
+def verificar_ambiente(index_dir=INDEX_DIR) -> list[str]:
+    """Problemas de configuração que fariam o assistente falhar, com o comando para corrigir."""
+    problemas = []
+    if not os.getenv("OPENAI_API_KEY"):
+        problemas.append("Defina OPENAI_API_KEY no arquivo .env para usar o assistente.")
+    if find_spec("faiss") is None:
+        problemas.append("Falta instalar as dependências do projeto: rode `pip install -r requirements.txt`.")
+    if not (index_dir / "index.faiss").exists():
+        problemas.append("Índice de busca não encontrado: rode `python build_index.py`.")
+    return problemas

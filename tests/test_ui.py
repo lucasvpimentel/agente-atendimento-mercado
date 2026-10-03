@@ -3,7 +3,7 @@ from streamlit.testing.v1 import AppTest
 
 from src.config import ROOT
 from src.ui import (dados_cliente, destacar_protocolos, html_chips, html_cupom, listar_clientes,
-                    mensagem_de_erro, primeiro_nome, rotulo_ferramenta, sugestoes)
+                    mensagem_de_erro, primeiro_nome, rotulo_ferramenta, sugestoes, verificar_ambiente)
 
 APP = ROOT / "app.py"
 
@@ -84,6 +84,29 @@ def test_sugestoes_dependem_de_o_cliente_estar_identificado():
     assert not any("pedido" in s.lower() for s in anonimo)
 
 
+# --- verificação do ambiente ---
+def test_ambiente_ok_nao_reclama_de_nada(monkeypatch, tmp_path):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-teste")
+    (tmp_path / "index.faiss").write_bytes(b"")
+    monkeypatch.setattr("src.ui.find_spec", lambda nome: object())
+    assert verificar_ambiente(tmp_path) == []
+
+
+def test_ambiente_aponta_faiss_ausente_com_o_comando_de_correcao(monkeypatch, tmp_path):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-teste")
+    (tmp_path / "index.faiss").write_bytes(b"")
+    monkeypatch.setattr("src.ui.find_spec", lambda nome: None)
+    problemas = verificar_ambiente(tmp_path)
+    assert len(problemas) == 1 and "pip install -r requirements.txt" in problemas[0]
+
+
+def test_ambiente_aponta_indice_ausente_e_chave_ausente(monkeypatch, tmp_path):
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.setattr("src.ui.find_spec", lambda nome: object())
+    problemas = " ".join(verificar_ambiente(tmp_path))
+    assert "build_index.py" in problemas and "OPENAI_API_KEY" in problemas
+
+
 # --- app (AppTest com agente falso) ---
 @pytest.fixture
 def app(monkeypatch):
@@ -140,6 +163,12 @@ def test_ticket_mostra_cupom_com_protocolo(app):
     assert len(cupons) == 1 and "TCK-2026-002" in cupons[0]
 
 
+def test_erro_do_agente_e_registrado_no_log_com_a_causa(app, caplog):
+    with caplog.at_level("ERROR", logger="atendimento"):
+        app.chat_input[0].set_value("provoque erro").run()
+    assert "boom" in caplog.text
+
+
 def test_erro_do_agente_vira_mensagem_amigavel(app):
     app.chat_input[0].set_value("provoque erro").run()
     assert not app.exception
@@ -176,3 +205,11 @@ def test_sem_chave_da_openai_mostra_erro_e_nao_quebra(monkeypatch):
     at = AppTest.from_file(str(APP), default_timeout=15).run()
     assert not at.exception
     assert any("OPENAI_API_KEY" in e.value for e in at.error)
+
+
+def test_ambiente_incompleto_mostra_o_que_fazer_e_nao_quebra(monkeypatch):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-teste")
+    monkeypatch.setattr("src.ui.find_spec", lambda nome: None)
+    at = AppTest.from_file(str(APP), default_timeout=15).run()
+    assert not at.exception
+    assert any("pip install -r requirements.txt" in e.value for e in at.error)
